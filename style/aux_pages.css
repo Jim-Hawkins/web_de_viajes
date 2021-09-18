@@ -1,0 +1,50 @@
+.header{
+   background-color: black;
+   color: white;
+   display: grid;
+   position: fixed;
+   width: 100%;
+   margin: -8px;
+   grid-template-columns: auto 30% 50% auto auto;
+   grid-template-rows: 2.4cm;
+}
+
+.description{
+    line-height:150%;
+    font-size: 22px;
+    font-family: Georgia, Copperplate, Fantasy;
+    width: 75%;
+}
+
+.paraLeft{
+    text-align:left;
+    width:80%;
+}
+.paraRight{
+    text-align:right;
+    padding-left:20%
+    
+}
+.photo{
+    max-width:50%;
+}
+
+#secondSection{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 2cm;
+   text-align:center;
+}
+
+#welcome_image {
+	margin-top: 5%;
+    width:100%;
+}
+
+h1 {
+    text-align:center;
+}
+
+li {
+    display:inline;
+}

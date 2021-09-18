@@ -1,0 +1,76 @@
+.header{
+    margin: -8px;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 10% 30% auto;
+    grid-template-rows: 2.4cm;
+}
+.mapDiv{
+    text-align: center;
+    margin-top: 5%;
+}
+#searchDiv {
+    text-align: center;
+    margin-left: 33%;
+    width: 33%;
+}
+.searcher{
+    grid-template-columns: 50% auto;
+}
+.experiencesDiv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+.column {
+    display: grid;
+    grid-row-gap: 50px;
+}
+#column1 {
+    padding-top: 70px;
+}
+#column3 {
+    padding-top: 100px;
+}
+.img_exp {
+    width:16vw;
+}
+
+.buttons {
+	margin: auto;
+	grid-template-columns: auto auto auto auto auto;
+	display: flex;
+}
+
+.lil-button {
+	background-color: white;
+	width: 100%;
+	margin-left:20px;
+	margin-right:20px;
+	height: 100%;
+}
+.options {
+	height:100%;
+	margin-left:20px;
+	margin-right:20px;
+}
+ul{
+	list-style-type:none;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+li {
+    float:left;
+	margin-left: 20px;
+	padding:10px;
+	background: white;
+}
+
+.fuente {
+	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+}
+
