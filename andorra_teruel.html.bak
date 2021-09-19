@@ -65,28 +65,28 @@
         
         <div id="videoColumn">
             <figure>
-                <img src="images/logo.svg" class="photo">
-                <figcaption></figcaption>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TL6oITaPGBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption>Paseo por Albarracín</figcaption>
             </figure>
             
             <figure>
-                <img src="images/logo.svg" class="photo">
-                <figcaption></figcaption>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HhKPpEXnBjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption>Paseo por Andorra</figcaption>
             </figure>
             
             <figure>
-                <img src="images/logo.svg" class="photo">
-                <figcaption></figcaption>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s2JuFd-Msn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption>Paseo por el Sistema Ibérico</figcaption>
             </figure>
             
             <figure>
-                <img src="images/logo.svg" class="photo">
-                <figcaption></figcaption>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XCyqN_chcsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption>Paseo por Dinópolis</figcaption>
             </figure>
             
             <figure>
-                <img src="images/logo.svg" class="photo">
-                <figcaption></figcaption>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L2hABNGvn3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption>Paseo por Teruel</figcaption>
             </figure>
         </div>
     </div>
