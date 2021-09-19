@@ -80,13 +80,13 @@
             </figure>
             
             <figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VvCJMsLh2Dg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <figcaption>Tren de la naturaleza</figcaption>
+                <img src="images/logo.svg" class="photo">
+                <figcaption></figcaption>
             </figure>
             
             <figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_wtesZ6LXtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <figcaption>Visita a Aranjuez</figcaption>
+                <img src="images/logo.svg" class="photo">
+                <figcaption></figcaption>
             </figure>
         </div>
     </div>

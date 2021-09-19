@@ -29,16 +29,16 @@
     max-width:50%;
 }
 
-#welcome_image {
-	margin-top: 5%;
-    width:100%;
-}
-
 #secondSection{
    display: grid;
    grid-template-columns: 50% 50%;
    grid-template-rows: 2cm;
    text-align:center;
+}
+
+#welcome_image {
+	margin-top: 5%;
+    width:100%;
 }
 
 h1 {

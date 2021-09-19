@@ -8,6 +8,19 @@
     grid-template-columns: 10% 30% auto;
     grid-template-rows: 2.4cm;
 }
+.buttons {
+	margin: auto;
+	grid-template-columns: auto auto auto auto auto;
+	display: flex;
+}
+
+.lil-button {
+	background-color: white;
+	width: 100%;
+	margin-left:20px;
+	margin-right:20px;
+	height: 100%;
+}
 
 .fuente {
 	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
@@ -61,6 +74,7 @@ a:link, a:visited, a:active {
 li {
     float:left;
 	margin-left: 5%;
+	
 	background: black;
 }
 
