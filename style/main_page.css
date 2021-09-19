@@ -9,6 +9,11 @@
     grid-template-rows: 2.4cm;
 }
 
+.footer{
+    width: 100%;
+    background-color: darkslategrey;
+}
+
 .fuente {
 	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     vertical-align: auto;
@@ -64,4 +69,11 @@ li {
 	background: black;
 }
 
+.social {
+    text-align: center;
+}
+
+.enlaces {
+    float: right;
+}
 
