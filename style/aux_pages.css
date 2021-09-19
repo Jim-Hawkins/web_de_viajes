@@ -48,3 +48,25 @@ h1 {
 li {
     display:inline;
 }
+
+.fuente {
+	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+    vertical-align: auto;
+    font-size:x-large;
+}
+
+ul{
+	list-style-type:none;
+    display: flex;
+    align-items: center;
+
+}
+a:link, a:visited, a:active {
+    color: gold;
+    text-decoration: none;
+}
+li {
+    float:left;
+	margin-left: 5%;
+	background: black;
+}
