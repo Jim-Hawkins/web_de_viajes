@@ -70,7 +70,9 @@ li {
 }
 
 .social {
-    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 200%;
 }
 
 .enlaces {
