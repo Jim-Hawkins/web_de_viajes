@@ -7,9 +7,17 @@
     grid-template-columns: 10% 25% auto;
 }
 
+.footer{
+    width: 100%;
+    background-color: darkslategrey;
+}
+
 .fuente {
+	margin: 0;
+    padding: 0;
 	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     font-size:x-large;
+	list-style-type:none;
 }
 
 .top_button:link, .top_button:visited, .top_button:active {
@@ -54,7 +62,6 @@
 #secondSection{
    display: grid;
    grid-template-columns: 50% 50%;
-   grid-template-rows: 2cm;
    text-align:center;
 }
 
@@ -62,22 +69,39 @@ h1 {
     text-align:center;
 }
 
-ul{
-	margin: 0;
-    padding: 0;
+.social_networks {
+    display:flex;
+    align-items:center;
 	list-style-type:none;
 
 }
-
-li {
+.top_item{
     width: 20%;
     height: 100%;
     float: left;
+    }
+    
+.social_icon {
+    margin-left: 20%;
+    float: left;
+}
+
+i {
+    text-align: center;
+    color: white;
+    width: 40px;
+    height: 40px;
 }
 
 a {
     height: 100%;
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+.social {
+    align-items: center;
+    display: flex;
+    font-size: 200%;
 }
