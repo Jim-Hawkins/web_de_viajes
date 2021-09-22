@@ -7,6 +7,11 @@
     grid-template-columns: 10% 25% auto;
 }
 
+.footer{
+    width: 100%;
+    background-color: darkslategrey;
+}
+
 .fuente {
 	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     font-size: x-large;
@@ -81,3 +86,13 @@ a {
     align-items: center;
     justify-content: center;
 }
+.social {
+    align-items: center;
+    display: flex;
+    font-size: 200%;
+}
+
+.enlaces {
+    float: right;
+}
+
