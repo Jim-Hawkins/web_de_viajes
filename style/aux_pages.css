@@ -1,36 +1,4 @@
-.header{
-    margin: -8px;
-    position: fixed;
-    width: 100%;
-    background-color: black;
-    display: grid;
-    grid-template-columns: 10% 25% auto;
-}
-
-.top_item{
-    width: 20%;
-    height: 100%;
-    float: left;
-}
-
-.top_button:link, .top_button:visited, .top_button:active {
-    color: gold;
-    text-decoration: none;
-	background: black;
-}
-
-.top_button:hover {
-    background-color: blue;
-    text-decoration: none;
-}
-
-.fuente {
-    margin: 0;
-    padding: 0;
-    font-family: 'Letric PERSONAL USE ONLY', sans-serif;
-    font-size: x-large;
-    list-style-type: none;
-}
+@import "common.css";
 
 .description {
     margin: auto;
@@ -48,27 +16,6 @@
 }
 .photo{
     max-width:80%;
-}
-
-.footer{
-    background-color: darkslategrey;
-}
-
-.social {
-    display: flex;
-    align-items: center;
-}
-
-.social_networks {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-
-}
-
-.social_icon {
-    margin-left: 20%;
-    font-size: 200%;
 }
 
 #page_title {
@@ -96,21 +43,6 @@ h1 {
     text-align: center;
     margin: auto;
     width: 60%;
-}
-
-i {
-    text-align: center;
-    color: white;
-    width: 40px;
-    height: 40px;
-}
-
-a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
 }
 
 figure {
