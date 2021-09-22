@@ -1,23 +1,33 @@
 .header{
-   background-color: black;
-   color: white;
-   display: grid;
-   position: fixed;
-   width: 100%;
-   margin: -8px;
-   grid-template-columns: auto 30% 50% auto auto;
-   grid-template-rows: 2.4cm;
+    margin: -8px;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10% 25% auto;
 }
 
-.description{
-    line-height:150%;
-    font-size: 22px;
-    font-family: Georgia, Copperplate, Fantasy;
-    width: 75%;
+.fuente {
+	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+    font-size:x-large;
 }
 
+.top_button:link, .top_button:visited, .top_button:active {
+    color: gold;
+    text-decoration: none;
+	background: black;
+}
+
+.top_button:hover {
+    background-color: blue;
+    text-decoration: none;
+}
+
+.description {
+    font-size: 25px;
+    font-family: sans-serif;
+}
 .paraLeft{
-    text-align:left;
     width:80%;
 }
 .paraRight{
@@ -34,6 +44,13 @@
     width:100%;
 }
 
+#page_title {
+    line-height: 200%;
+    font-family: "Arial black";
+    font-size: 150%;
+    color: white;
+}
+
 #secondSection{
    display: grid;
    grid-template-columns: 50% 50%;
@@ -45,28 +62,22 @@ h1 {
     text-align:center;
 }
 
-li {
-    display:inline;
-}
-
-.fuente {
-	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
-    vertical-align: auto;
-    font-size:x-large;
-}
-
 ul{
+	margin: 0;
+    padding: 0;
 	list-style-type:none;
-    display: flex;
-    align-items: center;
 
 }
-a:link, a:visited, a:active {
-    color: gold;
-    text-decoration: none;
-}
+
 li {
-    float:left;
-	margin-left: 5%;
-	background: black;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+a {
+    height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
