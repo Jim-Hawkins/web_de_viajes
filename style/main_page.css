@@ -46,28 +46,3 @@
     padding-top: 100px;
 }
 
-ul{
-	list-style-type:none;
-    display: flex;
-    align-items: center;
-
-}
-a:link, a:visited, a:active {
-    color: gold;
-    text-decoration: none;
-}
-li {
-    float:left;
-	margin-left: 5%;
-	background: black;
-}
-
-.social {
-    align-items: center;
-    display: flex;
-    font-size: 200%;
-}
-
-.enlaces {
-    float: right;
-}

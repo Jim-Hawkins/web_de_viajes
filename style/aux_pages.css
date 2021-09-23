@@ -15,7 +15,7 @@
     
 }
 .photo{
-    max-width:80%;
+    width:80%;
 }
 
 #page_title {
@@ -30,7 +30,7 @@
     width:100%;
 }
 
-#secondSection{
+.secondSection{
    margin-top: 50px;
    display: grid;
    grid-template-columns: auto auto auto auto auto;
@@ -47,4 +47,10 @@ h1 {
 
 figure {
     margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .secondSection{
+        grid-template-columns: auto;
+    }
 }
