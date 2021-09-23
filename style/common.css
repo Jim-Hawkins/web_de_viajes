@@ -11,12 +11,17 @@
     width: 20%;
     height: 100%;
     float: left;
+
 }
 
 .top_button:link, .top_button:visited, .top_button:active {
     color: gold;
     text-decoration: none;
     background: black;
+    min-width: 140px;
+    display: block;
+    height: 35px;
+    text-align: center;
 }
 
 .top_button:hover {
@@ -90,4 +95,39 @@ a {
     justify-content: center;
     text-decoration: none;
     color: white;
+}
+
+.desplegable {
+    font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+    display: none;
+    text-decoration: none;
+    color:rgb(224, 199, 54);
+    background:black;
+    text-align: center;
+    padding: 7px 0;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .fuente{
+    display: block;
+}
+
+@media only screen and (max-width:1120px) {
+    .fuente {
+        display: inline;
+        display: none;
+        position: absolute;
+    }
+
+    .fuente li{
+        width: 100%;
+    }
+
+    .desplegable {
+        display: block;
+        cursor: pointer;
+    }
 }
