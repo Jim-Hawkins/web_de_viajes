@@ -1,23 +1,12 @@
-.header{
-   background-color: black;
-   color: white;
-   display: grid;
-   position: fixed;
-   width: 100%;
-   margin: -8px;
-   grid-template-columns: auto 30% 50% auto auto;
-   grid-template-rows: 2.4cm;
-}
+@import "common.css";
 
-.description{
-    line-height:150%;
-    font-size: 22px;
-    font-family: Georgia, Copperplate, Fantasy;
-    width: 75%;
+.description {
+    margin: auto;
+    width: 60%;
+    font-size: 25px;
+    font-family: sans-serif;
 }
-
 .paraLeft{
-    text-align:left;
     width:80%;
 }
 .paraRight{
@@ -26,47 +15,36 @@
     
 }
 .photo{
-    max-width:50%;
+    max-width:80%;
+}
+
+#page_title {
+    line-height: 200%;
+    font-family: "Arial black";
+    font-size: 150%;
+    color: white;
 }
 
 #welcome_image {
-	margin-top: 5%;
+    margin-top: 5%;
     width:100%;
 }
 
 #secondSection{
+   margin-top: 50px;
    display: grid;
-   grid-template-columns: 50% 50%;
-   grid-template-rows: 2cm;
+   grid-template-columns: auto auto auto auto auto;
    text-align:center;
+   align-items: center;
+   margin-bottom: 50px;
 }
 
 h1 {
-    text-align:center;
+    text-align: center;
+    margin: auto;
+    width: 60%;
 }
 
-li {
-    display:inline;
-}
-
-.fuente {
-	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
-    vertical-align: auto;
-    font-size:x-large;
-}
-
-ul{
-	list-style-type:none;
-    display: flex;
-    align-items: center;
-
-}
-a:link, a:visited, a:active {
-    color: gold;
-    text-decoration: none;
-}
-li {
-    float:left;
-	margin-left: 5%;
-	background: black;
+figure {
+    margin: 0;
 }

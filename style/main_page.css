@@ -1,24 +1,4 @@
-.header{
-    margin: -8px;
-    position: fixed;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: grid;
-    grid-template-columns: 10% 30% auto;
-    grid-template-rows: 2.4cm;
-}
-
-.footer{
-    width: 100%;
-    background-color: darkslategrey;
-}
-
-.fuente {
-	font-family: 'Letric PERSONAL USE ONLY', sans-serif;
-    vertical-align: auto;
-    font-size:x-large;
-}
+@import "common.css";
 
 .mapDiv{
     text-align: center;
@@ -39,6 +19,19 @@
 
 .img_exp {
     width:16vw;
+}
+
+#page_title {
+    line-height: 200%;
+    font-family: "Arial black";
+    font-size: 150%;
+    color: white;
+}
+
+#map_title {
+    font-family: Arial, Verdana;
+    font-weight: bolder;
+    font-size: 150%;
 }
 
 #searchDiv {
@@ -78,4 +71,3 @@ li {
 .enlaces {
     float: right;
 }
-
