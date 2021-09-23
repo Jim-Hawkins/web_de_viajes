@@ -35,7 +35,9 @@
 
 .footer{
     background-color: darkslategrey;
+    color: white;
     margin: -8px;
+    padding-left: 5%;
 }
 
 .social {
@@ -47,16 +49,33 @@
     display: flex;
     align-items: center;
     list-style-type: none;
+    padding: 0;
 }
 
-.social_icon {
-    margin-left: 20%;
+.social_networks li {
+    margin-right: 20%;
     font-size: 200%;
 }
 
 .enlaces {
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
+
+.enlaces ul{
+    list-style-type: none;
+    padding: 0;   
+}
+
+.enlaces ul li{
+   margin: 0 0 20px;
+}
+
+#more{
+    display: flex;
+}
+
 i {
     text-align: center;
     color: white;
@@ -70,4 +89,5 @@ a {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    color: white;
 }

@@ -9,6 +9,4 @@ Hovers
 
 escalado de la imagen
 
-footer
-
 decorar un poco
