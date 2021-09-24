@@ -120,14 +120,23 @@ input[type=checkbox]:checked ~ .fuente{
         display: inline;
         display: none;
         position: absolute;
+        padding-top: 20%;
     }
 
     .fuente li{
         width: 100%;
     }
 
-    .desplegable {
+    .desplegable{
         display: block;
         cursor: pointer;
+        position: relative;
+    }
+
+    .desplegable:hover > .top_item{
+        display:block;
+    }
+    .top_item{
+        width: 50%;
     }
 }
