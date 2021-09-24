@@ -2,7 +2,7 @@
 
 .mapDiv{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 100px;
 }
 .searcher{
     grid-template-columns: 50% auto;

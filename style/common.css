@@ -19,8 +19,7 @@
     text-decoration: none;
     background: black;
     min-width: 140px;
-    display: block;
-    height: 35px;
+    display: flex;
     text-align: center;
 }
 
@@ -120,17 +119,21 @@ input[type=checkbox]:checked ~ .fuente{
         display: inline;
         display: none;
         position: absolute;
-        padding-top: 20%;
+        margin-left: 73%;
+        margin-top: 70px;
     }
 
     .fuente li{
-        width: 100%;
+        width: 80%;
     }
 
     .desplegable{
         display: block;
         cursor: pointer;
         position: relative;
+        margin-left: 59%;
+        padding-right: 10%;
+        font-size: xxx-large;
     }
 
     .desplegable:hover > .top_item{
@@ -138,5 +141,10 @@ input[type=checkbox]:checked ~ .fuente{
     }
     .top_item{
         width: 50%;
+    }
+    
+    .top_button{
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
