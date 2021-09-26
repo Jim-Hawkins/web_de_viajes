@@ -2,7 +2,6 @@
 
 .mapDiv{
     text-align: center;
-    margin-top: 100px;
 }
 .searcher{
     grid-template-columns: 50% auto;
@@ -50,4 +49,29 @@
     .experiencesDiv {
         grid-template-columns: auto;
     }
+
+    .mapDiv {
+        transform: scale(0.5, 0.5);
+        margin-top: -28%;
+        margin-left: -28%;
+        margin-bottom: -28%;
+    }
+
+    .img_exp {
+        width: 26vw;
+    }
+    
 }
+
+@media only screen and (max-width:600px) {
+    .mapDiv {
+        transform: scale(0.35);
+        margin-top: -45%;
+        margin-left: -45%;
+        margin-bottom: -45%;
+    }
+
+    .img_exp {
+        width: 46vw;
+    }
+} 
