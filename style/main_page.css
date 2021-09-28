@@ -55,6 +55,12 @@
         margin-top: -28%;
         margin-left: -28%;
         margin-bottom: -28%;
+        position: relative;
+        z-index: -1;
+    }
+    
+    .desplegable {
+        z-index: 0;
     }
 
     .img_exp {
