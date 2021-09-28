@@ -113,6 +113,22 @@ input[type=checkbox]:checked ~ .fuente{
     display: block;
 }
 
+.fa-facebook-f:hover{
+    color: rgb(3, 40, 61);
+}
+
+.fa-instagram:hover{
+    color: rgb(224, 168, 206);
+}
+
+.fa-twitter:hover{
+    color: rgb(68, 191, 207);
+}
+
+.footer_text:hover{
+    color: rgb(189, 180, 99);
+}
+
 @media only screen and (max-width:1120px) {
     .fuente {
         display: inline;
@@ -133,6 +149,7 @@ input[type=checkbox]:checked ~ .fuente{
         margin-left: 40%;
         padding-right: 10%;
         font-size: xxx-large;
+        
     }
 
     .desplegable:hover > .top_item{
