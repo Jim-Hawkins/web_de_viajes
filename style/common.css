@@ -5,12 +5,21 @@
     display: grid;
     grid-template-columns: 10% 25% auto;
 }
-
+body{
+    background-color: rgb(204, 204, 204);
+}
 .top_item{
     width: 20%;
     height: 100%;
     float: left;
 
+}
+
+
+.page_title{
+    font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
 }
 
 .top_button:link, .top_button:visited, .top_button:active {
