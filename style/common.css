@@ -84,6 +84,36 @@ body{
    margin: 0 0 20px;
 }
 
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: gray;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    padding-left: 40%;
+    padding-top: 50px;
+    padding-right: 40%;
+    padding-bottom: 50px;
+}
+
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.popup_body {
+    background: wheat;
+    padding: 20px;
+}
+
+
+
 #more{
     display: flex;
 }
