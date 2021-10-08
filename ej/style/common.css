@@ -88,15 +88,11 @@ input[type=checkbox]:checked ~ .menu { display: block; }
     bottom: 0;
     left: 0;
     right: 0;
-    background: gray;
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-    padding-left: 40%;
-    padding-top: 50px;
-    padding-right: 40%;
-    padding-bottom: 50px;
-}
+    padding: 50px;
+} 
 
 /*    Actions to take when overlay is targeted    */
 .overlay:target {
@@ -105,9 +101,15 @@ input[type=checkbox]:checked ~ .menu { display: block; }
 }
 
 /*    Pop-up style    */
-.popup_body {
+#popup_body {
     background: wheat;
     padding: 20px;
+}
+
+/*    Close pop-up    */
+#close {
+    width: 10%;
+    
 }
 
 /*    Style of drop-down list menu    */
