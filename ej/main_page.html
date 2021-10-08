@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Viajes Pepelandia</title>
+    <title>Viajes Ibérica</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/main_page.css">
     <link href="http://fonts.cdnfonts.com/css/letric-personal-use-only" rel="stylesheet">
@@ -15,13 +15,27 @@
         </a>
         
         <h2 class="page_title">Viajes Ibérica</h2>
-		<label for="desplegable" class="desplegable"> Menu</label>
+		<label for="desplegable" class="desplegable">Menu</label>
         <input type="checkbox" id="desplegable" role="button">
             <ul class = "fuente">
                 <li class="top_item"><a href="#" class="top_button">Reserva</a></li>
                 <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
                 <li class="top_item"><a href="#" class="top_button">Comprar</a></li>
-                <li class="top_item"><a href="#" class="top_button">Acceder</a></li>
+                <li class="top_item"><a href="#popup" class="top_button">Acceder</a>
+                                         <div id="popup" class="overlay">
+                                             <div id="popup_body">
+                                                 <h3>Introduzca su nombre</h3>
+                                                 <a id="cerrar" href="#">&times;</a>
+                                                 <div id="popup_content">
+                                                     <form id="formulario">
+                                                         <label for="nombre">Nombre aquí: </label>
+                                                         <input type="text" id="nombre">
+                                                     </form>
+                                                 </div>
+                                             </div>
+                                         </div>
+                     
+                     </li>
                 <li class="top_item"><a href="#" class="top_button">Registrarse</a></li>
             </ul>
     </div>
