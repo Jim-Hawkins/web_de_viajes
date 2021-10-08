@@ -1,27 +1,62 @@
-.header{
+/************************************
+*           HTML tags               *
+*************************************/
+
+body { background-color: rgb(204, 204, 204); }
+
+/*    General icon style    */
+i {
+    text-align: center;
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+/*    General link style    */
+a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+/*    Hide checkbox that controls whether drop-down is expanded    */
+input[type=checkbox] { display: none; }
+
+/*    Applies to condensed menu: when 'MENU' button clicked on: show options    */
+input[type=checkbox]:checked ~ .menu { display: block; }
+
+
+/************************************
+*             Classes               *
+*************************************/
+
+/*    Top banner    */
+.header {
     margin: -8px;
     width: 100%;
     background-color: black;
     display: grid;
     grid-template-columns: 10% 25% auto;
 }
-body{
-    background-color: rgb(204, 204, 204);
-}
-.top_item{
+
+/*    Top banner buttons    */
+.top_item {
     width: 20%;
     height: 100%;
     float: left;
-
 }
 
-
-.page_title{
+/*    Page title style     */
+.page_title {
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     font-size: x-large;
     color: rgb(255, 255, 255);
 }
 
+/*    Link style of top banner buttons    */
 .top_button:link, .top_button:visited, .top_button:active {
     color: gold;
     text-decoration: none;
@@ -37,7 +72,8 @@ body{
     text-decoration: none;
 }
 
-.fuente {
+/*    Top buttons container style    */
+.menu {
     margin: 0;
     padding: 0;
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
@@ -45,47 +81,7 @@ body{
     list-style-type: none;
 }
 
-.footer{
-    background-color: darkslategrey;
-    color: white;
-    margin: -8px;
-    padding-left: 5%;
-}
-
-.social {
-    display: flex;
-    align-items: center;
-}
-
-.social_networks {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-.social_networks li {
-    margin-right: 20%;
-    font-size: 200%;
-}
-
-.enlaces {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.enlaces ul{
-    list-style-type: none;
-    padding: 0;   
-}
-
-.enlaces ul li{
-   margin: 0 0 20px;
-}
-
-
-
+/*    Style of the container of registration pop-up    */
 .overlay {
     position: fixed;
     top: 0;
@@ -102,108 +98,124 @@ body{
     padding-bottom: 50px;
 }
 
-    .overlay:target {
-        visibility: visible;
-        opacity: 1;
-    }
+/*    Actions to take when overlay is targeted    */
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
 
+/*    Pop-up style    */
 .popup_body {
     background: wheat;
     padding: 20px;
 }
 
-
-
-#more{
-    display: flex;
-}
-
-i {
-    text-align: center;
-    color: white;
-    width: 40px;
-    height: 40px;
-}
-
-a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-}
-
-.desplegable {
+/*    Style of drop-down list menu    */
+.drop_down_button {
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     display: none;
     text-decoration: none;
-    color:rgb(224, 199, 54);
-    background:black;
+    color: rgb(224, 199, 54);
+    background: black;
     text-align: center;
     padding: 7px 0;
 }
 
-input[type=checkbox]{
-    display: none;
+/*    Bottom banner    */
+.footer {
+    background-color: darkslategrey;
+    color: white;
+    margin: -8px;
+    padding-left: 5%;
 }
 
-input[type=checkbox]:checked ~ .fuente{
-    display: block;
+/*    Social networks area    */
+.social {
+    display: flex;
+    align-items: center;
 }
 
-.fa-facebook-f:hover{
-    color: rgb(3, 40, 61);
+/*    List of social networks available for sharing    */
+.social_networks {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
 }
 
-.fa-instagram:hover{
-    color: rgb(224, 168, 206);
+/*    Elements of social networks list    */
+.social_networks li {
+    margin-right: 20%;
+    font-size: 200%;
 }
 
-.fa-twitter:hover{
-    color: rgb(68, 191, 207);
+/*    Site-related information    */
+.more_info {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.footer_text:hover{
-    color: rgb(189, 180, 99);
+/*    Style of link list    */
+.more_info ul{
+    list-style-type: none;
+    padding: 0;   
 }
+
+/*    Style of link list elements    */
+.more_info ul li{
+   margin: 0 0 20px;
+}
+
+/*    Hover effects on footer links    */
+.fa-facebook-f:hover{ color: rgb(3, 40, 61);     }
+.fa-instagram:hover { color: rgb(224, 168, 206); }
+.fa-twitter:hover   { color: rgb(68, 191, 207);  }
+.footer_text:hover  { color: rgb(189, 180, 99);  }
+
+
+/************************************
+*       Individual elements         *
+*************************************/
+
+/*    More-information footer container    */
+#more{
+    display: flex;
+}
+
+
+/************************************
+*           Media rules             *
+*************************************/
 
 @media only screen and (max-width:1120px) {
-    .fuente {
-        display: inline;
+
+    /*    Top banner new distribution    */
+    .header { grid-template-columns: 25% 25% auto; }
+    
+    /*    Default behavior of condensed menu    */
+    .menu {
         display: none;
         position: absolute;
         margin-left: 73%;
         margin-top: 70px;
     }
+    
+    /*    Drop-down elements style*/
+    .top_item { width: 80%; }
 
-    .fuente li{
-        width: 80%;
-    }
-
-    .desplegable{
+    /*    Drop-down label style    */
+    .drop_down_button {
         display: block;
         cursor: pointer;
         position: relative;
         margin-left: 40%;
         padding-right: 10%;
         font-size: xxx-large;
-        
     }
-
-    .desplegable:hover > .top_item{
-        display:block;
-    }
-    .top_item{
-        width: 50%;
-    }
-    
-    .top_button{
+    /*    Link style of drop-down menu buttons    */
+    .top_button {
         padding-top: 10px;
         padding-bottom: 10px;
-    }
-
-    .header {
-        grid-template-columns: 25% 25% auto;
     }
 }
