@@ -83,6 +83,7 @@ input[type=checkbox]:checked ~ .menu { display: block; }
 
 /*    Style of the container of registration pop-up    */
 .overlay {
+    overflow: scroll;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -100,16 +101,21 @@ input[type=checkbox]:checked ~ .menu { display: block; }
     opacity: 1;
 }
 
-/*    Pop-up style    */
-#popup_body {
-    background: wheat;
-    padding: 20px;
+/*    Close pop-up    */
+.close_popup {
+    float: right;
+    color: black;
+    width: 10%;
 }
 
-/*    Close pop-up    */
-#close {
-    width: 10%;
-    
+/*    Style for all input fields    */
+.input_field {
+    border-radius: 5px;
+}
+
+/*    Asterisk for compulsory fields    */
+.compulsory {
+    color: red;
 }
 
 /*    Style of drop-down list menu    */
@@ -183,6 +189,25 @@ input[type=checkbox]:checked ~ .menu { display: block; }
 /*    More-information footer container    */
 #more{
     display: flex;
+}
+
+/*    Log in pop-up style    */
+#login_body {
+    border-radius: 5px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    background: wheat;
+    padding: 20px;
+}
+
+#register_body {
+    border-radius: 5px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    background: wheat;
+    padding: 20px;
 }
 
 
