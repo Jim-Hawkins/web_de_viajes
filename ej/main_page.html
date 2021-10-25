@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="shortcut icon" href="images/logo.svg">
     <script src="script/cookies.js"></script>
+    <script src="script/searchBar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload = "getCookie">
     <div class="header">
         <a href="#">
             <img src="images/logo.svg">
@@ -118,53 +119,53 @@
     <div id="searchDiv">
         <h3>Busca aquí tu destino</h3>
         <div class="searcher">
-            <input type="text" placeholder="Digite aquí su destino">
-            <button type="button">Buscar</button>
+            <input id="myInput" type="text" placeholder="Digite aquí su destino">
+            <button type="button" onclick="searchFunction()">Buscar</button>
         </div>
     </div>
     
     <br>
     <div class="experiencesDiv">
         <div class="column" id="column1">
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
-                <figcaption>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.</figcaption>
+                <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
             </figure>
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
-                <figcaption>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.</figcaption>
+                <br>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.
             </figure>
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
-                <figcaption>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad</figcaption>
+                <br>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad.
             </figure>
         </div>
         <div class="column" id="column2">
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/castillo-navahermosa.jpg">
-                <figcaption>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.</figcaption>
+                <br>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.
             </figure>
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/risco_navahermosa.jpg">
-                <figcaption>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.</figcaption>
+                <br>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.
             </figure>
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/milagra.jpg">
-                <figcaption>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.</figcaption>
+                <br>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.
             </figure>
         </div>
         <div class="column" id="column3">
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/Ermita_andorra.jpg">
-                <figcaption>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.</figcaption>
+                <br>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.
             </figure>
-            <figure>
+            <figure class="figure">
                 <img class="img_exp" src="images/mineros-andorra.jpg">
-                <figcaption>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.</figcaption>
+                <br>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.
             </figure>
-            <figure>    
+            <figure class="figure">    
                 <img class="img_exp" src="images/catedral-andorra.jpg">
-                <figcaption>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.</figcaption>
+                <br>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.
             </figure>
         </div>
     </div>

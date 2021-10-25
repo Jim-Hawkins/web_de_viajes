@@ -44,3 +44,4 @@ function getCookie(name) {
 function checkCookie(name) {
   return (getCookie(name) != "");
 }
+
