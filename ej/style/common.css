@@ -74,7 +74,7 @@ a {
     list-style-type: none;
 }
 
-/*    Style of the container of registration pop-up    */
+/*    Style of the container of registration and login pop-ups    */
 .overlay {
     overflow: scroll;
     position: fixed;
