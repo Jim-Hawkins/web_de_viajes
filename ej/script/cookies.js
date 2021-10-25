@@ -20,8 +20,10 @@ function createCookie(){
                     document.getElementById("register_form_perfimg").value,
                     document.getElementById("register_form_prefs").value,
                     ];
-                    
+
         document.cookie = document.getElementById("register_form_uname").value + "=" + info + expires + "; path=/; SameSite=Lax";
+        //alert(document.getElementById("register_body").value);
+        document.getElementById("register_body").value.style.display('none');
     }
 }
 
@@ -29,6 +31,7 @@ function getCookie(name) {
   name = name + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
+  alert("entro " + name);
   for(let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == ' ') {
@@ -41,7 +44,8 @@ function getCookie(name) {
   return "";
 }
 
-function checkCookie(name) {
+function checkCookie() {
+  let name = document.getElementById("login_form_name").value;
   return (getCookie(name) != "");
 }
 

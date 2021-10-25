@@ -33,13 +33,13 @@
                          <form id="login_form" method="post", enctype="multipart/form-data">
                              <label for="login_form_name">Introduzca su nombre: </label>
                              <br>
-                             <input type="text" class="input_field" id="login_form_name" name="login_form_name">
+                             <input type="text" class="input_field" required id="login_form_name" name="login_form_name">
                              <br><br>
                              <label for="login_form_password">Introduzca su contraseña: </label>
                              <br>
-                             <input type="password" class="input_field" id="login_form_password" name="login_form_password">
+                             <input type="password" class="input_field" required id="login_form_password" name="login_form_password">
                              <br><br>
-			                 <input type="submit" value="Acceder" class="bottom_button">
+			                 <input type="submit" value="Acceder" class="bottom_button" onclick="getCookie()">
                          </form>
                      </div>
                  </div>  
