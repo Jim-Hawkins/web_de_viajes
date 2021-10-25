@@ -20,7 +20,7 @@ function createCookie(){
                     document.getElementById("register_form_perfimg").value,
                     document.getElementById("register_form_prefs").value,
                     ];
-        
+                    
         document.cookie = document.getElementById("register_form_uname").value + "=" + info + expires + "; path=/; SameSite=Lax";
     }
 }

@@ -55,25 +55,25 @@
 		                     	<legend>Información de la cuenta</legend>
 				                <label for="register_form_uname">Cree un nombre de usuario: <span class="compulsory">*</span></label>
 				                <br>
-				                <input type="text" class="input_field" id="register_form_uname" name="register_form_uname">
+				                <input type="text" class="input_field" required id="register_form_uname" name="register_form_uname">
 				                <br><br>
 				                <label for="register_form_password">Cree su contraseña: <span class="compulsory">*</span></label>
 				                <br>
-				                <input type="password" class="input_field" id="register_form_password" name="register_form_password">
+				                <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="register_form_password" name="register_form_password">
 				            </fieldset>
                             <fieldset id="personal_data">
                          	    <legend>Información personal</legend>
 				                <label for="register_form_name">Introduzca su nombre y apellidos: <span class="compulsory">*</span></label>
 				                <br>
-				                <input type="text" class="input_field" id="register_form_name" name="register_form_name">
+				                <input type="text" class="input_field" required id="register_form_name" name="register_form_name">
 				                <br><br>
 				                <label for="register_form_email">Introduzca su email: <span class="compulsory">*</span></label>
 				                <br>
-				                <input type="email" class="input_field" id="register_form_email" name="register_form_email">
+				                <input type="email" class="input_field" required id="register_form_email" name="register_form_email">
 				                <br><br>
 				                <label for="register_form_birth">Introduzca su fecha de nacimiento: <span class="compulsory">*</span></label>
 				                <br>
-				                <input type="date" class="input_field" id="register_form_birth" name="register_form_birth">
+				                <input type="date" class="input_field" required id="register_form_birth" name="register_form_birth">
 				                <br><br>
 				                <label for="register_form_perfimg">Escoja su foto de perfil: </label>
 				                <br>
@@ -88,7 +88,7 @@
 				                    <option value="business">Turismo de negocions</option>
 				                </select>
 				            </fieldset>
-		                    <input type="checkbox" id="register_form_cond" name="register_form_cond">
+		                    <input type="checkbox" id="register_form_cond" required name="register_form_cond">
 		                    <label for="register_form_cond">He leído y acepto las Condiciones de uso <span class="compulsory">*</span></label>
                             <br><br>
                             <span class="compulsory">* Campos obligatorios</span>
