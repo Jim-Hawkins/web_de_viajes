@@ -1,5 +1,5 @@
 @import "common.css";
-
+/*
 .mapDiv{
     text-align: center;
 }
@@ -9,6 +9,7 @@
     border-style: solid;
     border-width: 1%;
 }
+
 .searcher{
     grid-template-columns: 50% auto;
 }
@@ -51,7 +52,7 @@
     }
 
     .mapDiv {
-        transform: scale(0.5, 0.5);
+        transform: scale(0.5);
         margin-top: -28%;
         margin-left: -28%;
         margin-bottom: -28%;
@@ -80,4 +81,4 @@
     .img_exp {
         width: 46vw;
     }
-} 
+} */

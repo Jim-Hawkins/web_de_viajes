@@ -4,6 +4,7 @@
     <title>Viajes Ibérica</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/main_page.css">
+    <link rel="stylesheet" href="style/aux_pages.css">
     <link href="http://fonts.cdnfonts.com/css/letric-personal-use-only" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="shortcut icon" href="images/logo.svg">
@@ -38,9 +39,9 @@
                              <br><br>
                              <label for="login_form_password">Introduzca su contraseña: </label>
                              <br>
-                             <input type="password" class="input_field" required id="login_form_password" name="login_form_password">
+                             <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="login_form_password" name="login_form_password">
                              <br><br>
-			                 <input type="submit" value="Acceder" class="bottom_button" onclick="getCookie()">
+			                 <input type="submit" value="Acceder" class="bottom_button" onclick="getCookie();">
                          </form>
                      </div>
                  </div>  
@@ -82,11 +83,11 @@
 				                <br><br>
 				                <label for="register_form_prefs">Me interesa... </label>
 				                <br>
-				                <select multiple class="input_field" id="register_form_prefs" name="register_form_prefs">
+				                <select class="input_field" id="register_form_prefs" name="register_form_prefs">
 				                    <option value="culture">Turismo cultural</option>
 				                    <option value="environment">Turismo ambiental</option>
 				                    <option value="history">Turismo histórico</option>
-				                    <option value="business">Turismo de negocions</option>
+				                    <option value="business">Turismo de negocios</option>
 				                </select>
 				            </fieldset>
 		                    <input type="checkbox" id="register_form_cond" required name="register_form_cond">
@@ -96,7 +97,7 @@
                             <br><br>
                             <div>
 			                	<input type="reset" value="Borrar" class="bottom_button">
-			                	<input type="submit" value="Guardar" class="bottom_button" onclick="createCookie();">
+			                	<input type="submit" value="Guardar" class="bottom_button" onclick="createCookieRegistry();">
                             </div>
                          </form>
                      </div>
@@ -307,51 +308,51 @@
     <div id="searchDiv">
         <h3>Busca aquí tu destino</h3>
         <div class="searcher">
-            <input id="myInput" type="text" placeholder="Digite aquí su destino">
+            <input id="buscador" type="text" placeholder="Digite aquí su destino">
             <button type="button" onclick="searchFunction()">Buscar</button>
         </div>
     </div>
     
     <br>
     <div class="experiencesDiv">
-        <div class="column" id="column1">
-            <figure class="figure">
+        <div class="column" id="column1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
                 <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
             </figure>
-            <figure class="figure">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
                 <br>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.
             </figure>
-            <figure class="figure">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
                 <br>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad.
             </figure>
         </div>
-        <div class="column" id="column2">
-            <figure class="figure">
+        <div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/castillo-navahermosa.jpg">
                 <br>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.
             </figure>
-            <figure class="figure">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/risco_navahermosa.jpg">
                 <br>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.
             </figure>
-            <figure class="figure">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/milagra.jpg">
                 <br>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.
             </figure>
         </div>
-        <div class="column" id="column3">
-            <figure class="figure">
+        <div class="column" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/Ermita_andorra.jpg">
                 <br>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.
             </figure>
-            <figure class="figure">
+            <figure class="figure" draggable=true ondragstart="drag(event)">
                 <img class="img_exp" src="images/mineros-andorra.jpg">
                 <br>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.
             </figure>
-            <figure class="figure">    
+            <figure class="figure" draggable=true ondragstart="drag(event)">    
                 <img class="img_exp" src="images/catedral-andorra.jpg">
                 <br>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.
             </figure>

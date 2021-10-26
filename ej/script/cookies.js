@@ -1,10 +1,7 @@
-/*VALIDAR DATOS DEL FORMULARIO*/
 
-
-
-
-function createCookie(){
-    if( checkCookie(document.getElementById("register_form_uname").value) ){
+/* Function to create a cookie when a user registers in the page */
+function createCookieRegistry(){
+    if(checkCookie(document.getElementById("register_form_email").value) ){
         alert("Ese nombre ya está registrado");
         return;
     } else{
@@ -15,37 +12,61 @@ function createCookie(){
         let info = [
                     document.getElementById("register_form_password").value,
                     document.getElementById("register_form_name").value,
-                    document.getElementById("register_form_email").value,
+                    document.getElementById("register_form_uname").value,
                     document.getElementById("register_form_birth").value,
                     document.getElementById("register_form_perfimg").value,
                     document.getElementById("register_form_prefs").value,
                     ];
+        
+        document.cookie = document.getElementById("register_form_email").value + "=" + info + expires + "; path=/; SameSite=secure";
+        
 
-        document.cookie = document.getElementById("register_form_uname").value + "=" + info + expires + "; path=/; SameSite=Lax";
-        //alert(document.getElementById("register_body").value);
-        document.getElementById("register_body").value.style.display('none');
+        let expr = true;
+        for (i=0;i<info.length - 2;i++){
+          if (info[i] == ""){
+            expr = false;
+          }
+        }
+        if (expr){
+          window.location.href='#';
+        } else{
+          alert("Introduce todos los campos obligatorios.");
+        }
     }
 }
 
-function getCookie(name) {
-  name = name + "=";
+function getCookie() {
+  let email = '';
+  email = email + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  alert("entro " + name);
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
+  let cookie_element = decodedCookie.split(';');
+  for(let i = 0; i < cookie_element.length; i++) {
+    let c = cookie_element[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
+    if (c.indexOf(email) == 0) {
+      return c.substring(email.length, c.length);
     }
   }
   return "";
 }
 
 function checkCookie() {
-  let name = document.getElementById("login_form_name").value;
-  return (getCookie(name) != "");
+  let email = document.getElementById("register_form_email").value;
+  return (getCookie(email) != "");
 }
 
+function checkCookieLogin() {
+  //get email introduced and check wheter it is registered
+  let email = document.getElementById("login_form_email").value;
+  if (getCookie(email != "")) {
+    window.location.href='#';
+  }
+
+  else{
+    alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
+  }
+
+  
+}

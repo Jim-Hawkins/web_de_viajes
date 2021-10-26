@@ -134,6 +134,34 @@ a {
     padding: 7px 0;
 }
 
+/*    Map styles    */
+.mapDiv{ text-align: center; }
+
+.map {
+    border: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1%;
+}
+
+/*    Search set style    */
+.searcher { grid-template-columns: 50% auto; }
+
+/*    Third section (experiences)    */
+.experiencesDiv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+/*    Experiences columns    */
+.column {
+    display: grid;
+    grid-row-gap: 50px;
+}
+
+/*    Individual images style    */
+.img_exp { width:16vw; }
+
 /*    Bottom banner    */
 .footer {
     background-color: darkslategrey;
@@ -226,6 +254,24 @@ a {
     padding: 20px 20px 0 20px;
 }
 
+/*    Style for map title (first section)    */
+#map_title {
+    font-family: Arial, Verdana;
+    font-weight: bolder;
+    font-size: 150%;
+}
+
+/*    Second section style    */
+#searchDiv {
+    text-align: center;
+    margin-left: 33%;
+    width: 33%;
+}
+
+/*    Particularities of experiences columns    */
+#column1 { padding-top: 70px; }
+#column3 { padding-top: 100px; }
+
 
 /************************************
 *           Media rules             *
@@ -262,3 +308,34 @@ a {
         padding-bottom: 10px;
     }
 }
+
+@media only screen and (max-width:768px) {
+    .experiencesDiv {
+        grid-template-columns: auto;
+    }
+
+    .mapDiv {
+        transform: scale(0.5);
+        margin-top: -28%;
+        margin-left: -28%;
+        margin-bottom: -28%;
+        position: relative;
+        z-index: -1;
+    }
+    
+    .desplegable { z-index: 0; }
+
+    .img_exp { width: 26vw; }
+    
+}
+
+@media only screen and (max-width:600px) {
+    .mapDiv {
+        transform: scale(0.35);
+        margin-top: -45%;
+        margin-left: -45%;
+        margin-bottom: -45%;
+    }
+
+    .img_exp { width: 46vw; }
+} 
