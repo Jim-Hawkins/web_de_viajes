@@ -21,7 +21,7 @@ function searchFunction() {
     for(let i = 0; i < figures.length; i++){
         figures[i].style.display = 'none';
         for(let j = 0; j < filter.length; j++){
-            console.log(figures[i].innerHTML.toUpperCase().indexOf(filter[j]));
+            //console.log(figures[i].innerHTML.toUpperCase().indexOf(filter[j]));
             if(figures[i].innerHTML.toUpperCase().indexOf(filter[j]) > -1){
                 figures[i].style.display = "";
                 hidden--;

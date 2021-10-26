@@ -3,17 +3,16 @@
 <head>
     <title>Viajes Ibérica</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/main_page.css">
-    <link rel="stylesheet" href="style/aux_pages.css">
+    <link rel="stylesheet" href="style/common.css">
     <link href="http://fonts.cdnfonts.com/css/letric-personal-use-only" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="shortcut icon" href="images/logo.svg">
-    <script src="script/cookies.js"></script>
     <script src="script/searchBar.js"></script>
+    <script src="script/cookies.js"></script>
     <script src="script/dragdrop.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body onload = "getCookie">
+<body>
     <div class="header">
         <a href="#">
             <img src="images/logo.svg">
@@ -27,82 +26,95 @@
             <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
             <li class="top_item"><a href="#" class="top_button">Comprar</a></li>
             <li class="top_item">
-                 <a href="#login" class="top_button">Acceder</a>
-                 <div id="login" class="overlay">
-                     <div id="login_body">
-                         <a class="close_popup" href="#">&times;</a>
-                         <h2>¡Bienvenido de nuevo!</h2>
-                         <form id="login_form" method="post", enctype="multipart/form-data">
-                             <label for="login_form_name">Introduzca su nombre: </label>
-                             <br>
-                             <input type="text" class="input_field" required id="login_form_name" name="login_form_name">
-                             <br><br>
-                             <label for="login_form_password">Introduzca su contraseña: </label>
-                             <br>
-                             <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="login_form_password" name="login_form_password">
-                             <br><br>
-			                 <input type="submit" value="Acceder" class="bottom_button" onclick="getCookie();">
-                         </form>
-                     </div>
-                 </div>  
-             </li>
-             <li class="top_item">
-                 <a href="#register" class="top_button">Registrarse</a>
-                 <div id="register" class="overlay">
-                     <div id="register_body">
-                         <a class="close_popup" href="#">&times;</a>
-                         <h2>¡Bienvenido a Viajes Ibérica!</h2>
-                         <form id="register_form" method="post", enctype="multipart/form-data">
-                         	<fieldset id="user_data">
-		                     	<legend>Información de la cuenta</legend>
-				                <label for="register_form_uname">Cree un nombre de usuario: <span class="compulsory">*</span></label>
-				                <br>
-				                <input type="text" class="input_field" required id="register_form_uname" name="register_form_uname">
-				                <br><br>
-				                <label for="register_form_password">Cree su contraseña: <span class="compulsory">*</span></label>
-				                <br>
-				                <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="register_form_password" name="register_form_password">
-				            </fieldset>
-                            <fieldset id="personal_data">
-                         	    <legend>Información personal</legend>
-				                <label for="register_form_name">Introduzca su nombre y apellidos: <span class="compulsory">*</span></label>
-				                <br>
-				                <input type="text" class="input_field" required id="register_form_name" name="register_form_name">
-				                <br><br>
-				                <label for="register_form_email">Introduzca su email: <span class="compulsory">*</span></label>
-				                <br>
-				                <input type="email" class="input_field" required id="register_form_email" name="register_form_email">
-				                <br><br>
-				                <label for="register_form_birth">Introduzca su fecha de nacimiento: <span class="compulsory">*</span></label>
-				                <br>
-				                <input type="date" class="input_field" required id="register_form_birth" name="register_form_birth">
-				                <br><br>
-				                <label for="register_form_perfimg">Escoja su foto de perfil: </label>
-				                <br>
-				                <input type="file" accept="image/*" class="input_field" id="register_form_perfimg" name="register_form_perfimg">
-				                <br><br>
-				                <label for="register_form_prefs">Me interesa... </label>
-				                <br>
-				                <select class="input_field" id="register_form_prefs" name="register_form_prefs">
-				                    <option value="culture">Turismo cultural</option>
-				                    <option value="environment">Turismo ambiental</option>
-				                    <option value="history">Turismo histórico</option>
-				                    <option value="business">Turismo de negocios</option>
-				                </select>
-				            </fieldset>
-		                    <input type="checkbox" id="register_form_cond" required name="register_form_cond">
-		                    <label for="register_form_cond">He leído y acepto las Condiciones de uso <span class="compulsory">*</span></label>
-                            <br><br>
-                            <span class="compulsory">* Campos obligatorios</span>
-                            <br><br>
-                            <div>
-			                	<input type="reset" value="Borrar" class="bottom_button">
-			                	<input type="submit" value="Guardar" class="bottom_button" onclick="createCookieRegistry();">
-                            </div>
-                         </form>
-                     </div>
-                 </div>
-             </li>
+                <div class = "login_anonymous">
+                    <a href="#login" class="top_button">Acceder</a>
+                    <div id="login" class="overlay">
+                        <div id="login_body">
+                            <a class="close_popup" href="#">&times;</a>
+                            <h2>¡Bienvenido de nuevo!</h2>
+                            <form id="login_form"> <!--method="post", enctype="multipart/form-data" -->
+                                <label for="login_form_email">Introduzca su correo: </label>
+                                <br>
+                                <input type="text" class="input_field" required id="login_form_email" name="login_form_email">
+                                <br><br>
+                                <label for="login_form_password">Introduzca su contraseña: </label>
+                                <br>
+                                <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="login_form_password" name="login_form_password">
+                                <br><br>
+                                <input type="submit" value="Acceder" class="bottom_button" onclick="checkCookieLogin();">
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+                <div class = "hiddenLogin" id="img_perf">
+                    <img src = "images/logo.svg" alt = "imagen de perfil">
+                </div> 
+            </li>
+            <li class="top_item">
+                <div class="register_anonymous">
+                    <a href="#register" class="top_button">Registrarse</a>
+                    <div id="register" class="overlay">
+                        <div id="register_body">
+                            <a class="close_popup" href="#">&times;</a>
+                            <h2>¡Bienvenido a Viajes Ibérica!</h2>
+                            <form id="register_form"> <!--method="post", enctype="multipart/form-data" -->
+                                <fieldset id="user_data">
+                                    <legend>Información de la cuenta</legend>
+                                    <label for="register_form_uname">Cree un nombre de usuario: <span class="compulsory">*</span></label>
+                                    <br>
+                                    <input type="text" class="input_field" required id="register_form_uname" name="register_form_uname">
+                                    <br><br>
+                                    <label for="register_form_password">Cree su contraseña: <span class="compulsory">*</span></label>
+                                    <br>
+                                    <input type="password" class="input_field" required maxlength=8 pattern="[a-zA-Z0-9]+" id="register_form_password" name="register_form_password">
+                                </fieldset>
+                                <fieldset id="personal_data">
+                                    <legend>Información personal</legend>
+                                    <label for="register_form_name">Introduzca su nombre y apellidos: <span class="compulsory">*</span></label>
+                                    <br>
+                                    <input type="text" class="input_field" required id="register_form_name" name="register_form_name">
+                                    <br><br>
+                                    <label for="register_form_email">Introduzca su email: <span class="compulsory">*</span></label>
+                                    <br>
+                                    <input type="email" class="input_field" required id="register_form_email" name="register_form_email">
+                                    <br><br>
+                                    <label for="register_form_birth">Introduzca su fecha de nacimiento: <span class="compulsory">*</span></label>
+                                    <br>
+                                    <input type="date" class="input_field" required id="register_form_birth" name="register_form_birth">
+                                    <br><br>
+                                    <label for="register_form_perfimg">Escoja su foto de perfil: </label>
+                                    <br>
+                                    <input type="file" accept="image/*" class="input_field" id="register_form_perfimg" name="register_form_perfimg">
+                                    <br><br>
+                                    <label for="register_form_prefs">Me interesa... </label>
+                                    <br>
+                                    <select class="input_field" id="register_form_prefs" name="register_form_prefs">
+                                        <option value="culture">Turismo cultural</option>
+                                        <option value="environment">Turismo ambiental</option>
+                                        <option value="history">Turismo histórico</option>
+                                        <option value="business">Turismo de negocios</option>
+                                    </select>
+                                </fieldset>
+                                <input type="checkbox" id="register_form_cond" required name="register_form_cond">
+                                <label for="register_form_cond">He leído y acepto las Condiciones de uso <span class="compulsory">*</span></label>
+                                <br><br>
+                                <span class="compulsory">* Campos obligatorios</span>
+                                <br><br>
+                                <div>
+                                    <input type="reset" value="Borrar" class="bottom_button">
+                                    <input type="submit" value="Guardar" class="bottom_button" onclick="createCookieOnRegistry();">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="hiddenLogin">
+                    <ul class="menu_opt">
+                        <li class="top_item">Mi perfil</li>
+                        <li class="top_item">Mis experiencias</li>
+                        <li class="top_item">Cerrar sesión</li>
+                </div>
+            </li>
         </ul>
     </div>
     
@@ -117,7 +129,7 @@
                 <div id="register_body">
                     <a class="close_popup" href="#">&times;</a>
                     <div id="firstSection">
-                        <img src="images/aranjuez_portada.jpg" alt="Madrid" id="welcome_image">
+                        <img src="images/aranjuez_portada.jpg" alt="Madrid" class="welcome_image">
                         <h1>¡Vive la experiencia Madrid!</h1>
                         <div class="description">
                             <p class="paraLeft">Acércate a la Comunidad de Madrid y disfrutra de la inmensa oferta de experiencias que te ofrecemos. Los destinos que aquí mostramos se ajustan a tu perfil de aventurero. Puedes elegir desde las preciosas Vegas de Aranjuez hasta la grandiosa Sierra de Guadarrama, pasando por las llanuras de Fuenlabrada.</p>
@@ -181,7 +193,7 @@
                 <div id="register_body">
                     <a class="close_popup" href="#">&times;</a>
                     <div id="firstSection">
-                        <img src="images/toledo.jpg" alt="Toledo" id="welcome_image">
+                        <img src="images/toledo.jpg" alt="Toledo" class="welcome_image">
                         <h1>¡La magia de Toledo!</h1>
                         <div class="description">
                             <p class="paraLeft">Un viaje histórico que te hará volver a la época medieval. Este plan es el adecuado para gente curiosa, con ganas de conocer la historia de España y, ¡sobre todo para gente que quiera pasar una experiencia inolvidable! Si cumples alguna de esas características apúntate a hacer un viaje a la provincia de Toledo y a disfrutar con una de las maravillas de este país.</p>
@@ -243,7 +255,7 @@
                 <div id="register_body">
                     <a class="close_popup" href="#">&times;</a>
                     <div id="firstSection">
-                        <img src="images/albarracin.jpg" alt="Madrid" id="welcome_image">
+                        <img src="images/albarracin.jpg" alt="Madrid" class="welcome_image">
                         <h1>¡Teruel, sí existe y te va a encantar!</h1>
                         <div class="description">
                             <p class="paraLeft">En esta experiencia podrás comprobar que Teruel existe y además te sorprenderás. Para comenzar, la ciudad de Teruel tiene unos puntos turísticos muy importantes. Entre los cuales se encuentran el acueducto de Teruel, el cual conecta a modo de puente una parte de esta ciudad con otra. Este es de estilo renacentista y sobre todo, un sitio muy bonito para una buena foto.</p>
@@ -317,45 +329,153 @@
     <div class="experiencesDiv">
         <div class="column" id="column1" ondrop="drop(event)" ondragover="allowDrop(event)">
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
+                <a href=#Guadarrama class = img_figure>
+                    <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama" >
+                </a>
                 <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
             </figure>
+            <div id=Guadarrama class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
+                        <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
+                    </figure>
+                </div>
+            </div>
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
+                <a href=#Fuenlabrada class = img_figure>
+                    <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
+                </a>
                 <br>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.
             </figure>
+            <div id=Fuenlabrada class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
+                        <br>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.
+                    </figure>
+                </div>
+            </div>
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
+                <a href=#Aranjuez class = img_figure>
+                    <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
+                </a>
                 <br>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad.
             </figure>
+            <div id=Aranjuez class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
+                        <br>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad.
+                    </figure>
+                </div>
+            </div>
         </div>
+
         <div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/castillo-navahermosa.jpg">
+                <a href=#CNavahermosa class = img_figure>
+                    <img class="img_exp" src="images/castillo-navahermosa.jpg">
+                </a>
                 <br>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.
             </figure>
+            <div id=CNavahermosa class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/castillo-navahermosa.jpg">
+                        <br>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.
+                    </figure>
+                </div>
+            </div>
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/risco_navahermosa.jpg">
+                <a href=#RNavahermosa class = img_figure>
+                    <img class="img_exp" src="images/risco_navahermosa.jpg">
+                </a>
                 <br>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.
             </figure>
+            <div id=RNavahermosa class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/risco_navahermosa.jpg">
+                        <br>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.
+                    </figure>
+                </div>
+            </div>
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/milagra.jpg">
+                <a href=#ENavahermosa class = img_figure>
+                    <img class="img_exp" src="images/milagra.jpg">
+                </a>
                 <br>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.
             </figure>
+            <div id=ENavahermosa class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/milagra.jpg">
+                        <br>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.
+                    </figure>
+                </div>
+            </div>
         </div>
         <div class="column" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)">
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/Ermita_andorra.jpg">
+                <a href=#Ermita class = img_figure>
+                    <img class="img_exp" src="images/Ermita_andorra.jpg">
+                </a>
                 <br>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.
             </figure>
+            <div id=Ermita class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/Ermita_andorra.jpg">
+                        <br>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.
+                    </figure>
+                </div>
+            </div>
+
             <figure class="figure" draggable=true ondragstart="drag(event)">
-                <img class="img_exp" src="images/mineros-andorra.jpg">
+                <a href=#Estatua class = img_figure>
+                    <img class="img_exp" src="images/mineros-andorra.jpg">
+                </a>
                 <br>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.
             </figure>
-            <figure class="figure" draggable=true ondragstart="drag(event)">    
-                <img class="img_exp" src="images/catedral-andorra.jpg">
+            <div id=Estatua class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                        <img class="img_exp" src="images/mineros-andorra.jpg">
+                        <br>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.
+                    </figure>
+                </div>
+            </div>
+
+            <figure class="figure" draggable=true ondragstart="drag(event)">
+                <a href=#Iglesia class = img_figure>    
+                    <img class="img_exp" src="images/catedral-andorra.jpg">
+                </a>
                 <br>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.
             </figure>
+            <div id=Iglesia class="overlay">
+                <div id="pop_up_exp">
+                    <a class="close_popup" href="#">&times;</a>
+                    <figure class="figure" draggable=true ondragstart="drag(event)">    
+                        <img class="img_exp" src="images/catedral-andorra.jpg">
+                        <br>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.
+                    </figure>
+                </div>
+            </div>
+
         </div>
     </div>
     

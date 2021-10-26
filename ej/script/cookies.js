@@ -1,72 +1,109 @@
 
 /* Function to create a cookie when a user registers in the page */
-function createCookieRegistry(){
-    if(checkCookie(document.getElementById("register_form_email").value) ){
+function createCookieOnRegistry(){
+
+    //email will be cookie identifier
+    let email = register_form_email.value;
+    
+    //check whether this email is already registered
+    if ( cookieExists(email) ){
         alert("Ese nombre ya está registrado");
+        window.location.href = "#";
         return;
-    } else{
-        const d = new Date();
-        d.setTime(d.getTime() + (30*24*60*60*1000));
-        let expires = "; expires="+ d.toUTCString();
+    }
+    
+    //check if any compulsory parameter was not typed
+    if (email === "" 
+       || register_form_uname.value === "" 
+       || register_form_password.value === "" 
+       || register_form_name.value === ""
+       || register_form_birth.value === "")
+    {
         
-        let info = [
-                    document.getElementById("register_form_password").value,
-                    document.getElementById("register_form_name").value,
-                    document.getElementById("register_form_uname").value,
-                    document.getElementById("register_form_birth").value,
-                    document.getElementById("register_form_perfimg").value,
-                    document.getElementById("register_form_prefs").value,
-                    ];
-        
-        document.cookie = document.getElementById("register_form_email").value + "=" + info + expires + "; path=/; SameSite=secure";
-        
+        alert("Introduce todos los campos obligatorios.");
+        return;
+    }
 
-        let expr = true;
-        for (i=0;i<info.length - 2;i++){
-          if (info[i] == ""){
-            expr = false;
-          }
+    //set the expiration parameter to one month from now
+    let expiration = new Date();
+    expiration.setTime(expiration.getTime() + (30*24*60*60*1000));
+    expiration = "; expires="+ expiration.toUTCString();
+    
+    //set an array containing form's informtarion
+    let info = [
+                register_form_uname.value,
+                register_form_password.value,
+                register_form_name.value,
+                register_form_birth.value,
+                register_form_perfimg.value,
+                register_form_prefs.value,
+                ];
+
+    //create a new cookie
+    document.cookie = email + "=" + info + expiration + "; path=/; SameSite=secure";
+    //close the popup
+    window.location.href = "#";
+}
+
+/* Reveals whether a cookie exists in the webpage */
+function cookieExists(cookie_name) {
+  return (getCookie(cookie_name) !== "");
+}
+
+
+/* Receives a cookie_name and returns the corresponding cookie */
+function getCookie(cookie_name) {
+    //add = symbol for easing search and cookie manipulation
+    //cookie_name += "=";
+    
+    //obtain the array of cookies and declare an iterator
+    let cookies = decodeURIComponent(document.cookie).split(';');
+    let current_cookie = null;
+
+    //examine each cookie by comparing its identifier with 'cookie_name' 
+    for (let i = 0; i < cookies.length; i++) {
+        current_cookie = cookies[i];
+        //remove preceding spaces if any
+        while (current_cookie.charAt(0) == ' ') {
+            current_cookie = current_cookie.substring(1);
         }
-        if (expr){
-          window.location.href='#';
-        } else{
-          alert("Introduce todos los campos obligatorios.");
+        if (current_cookie.substring(0, cookie_name.length) === cookie_name) {
+            //on success, return only the content of the cookie
+            return current_cookie.substring(cookie_name.length, current_cookie.length);
         }
     }
+    //if none of the cookies matches 'cookie_name', return an empty string
+    return "";
 }
 
-function getCookie() {
-  let email = '';
-  email = email + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let cookie_element = decodedCookie.split(';');
-  for(let i = 0; i < cookie_element.length; i++) {
-    let c = cookie_element[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(email) == 0) {
-      return c.substring(email.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let email = document.getElementById("register_form_email").value;
-  return (getCookie(email) != "");
-}
 
 function checkCookieLogin() {
   //get email introduced and check wheter it is registered
-  let email = document.getElementById("login_form_email").value;
-  if (getCookie(email != "")) {
+  let email = login_form_email.value;
+  if (cookieExists(email)) {
+    alert("Bienvenido a Viajes Ibérica");
     window.location.href='#';
-  }
-
-  else{
+    show_profile();
+    return;
+  } else{
     alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
+    window.location.href='#';
+    return;
   }
-
-  
 }
+
+function show_profile() {
+    var register = getElementsByClassName("register_anonymous");
+    var login = getElementsByClassName("login_anonymous");
+    register.style.display('none');
+    login.style.display('none');
+}
+
+
+
+
+
+
+
+
+

@@ -22,6 +22,17 @@ a {
     color: white;
 }
 
+/*    Titles style    */
+h1 {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
+/*    General figure style    */
+.figure { margin: 0; }
+
+
 /************************************
 *             Classes               *
 *************************************/
@@ -137,6 +148,12 @@ a {
 /*    Map styles    */
 .mapDiv{ text-align: center; }
 
+.hiddenLogin{display:none;}
+
+.login_anonymous{height:100%;}
+
+.register_anonymous{height:100%;}
+
 .map {
     border: rgb(0, 0, 0);
     border-style: solid;
@@ -153,14 +170,57 @@ a {
     text-align: center;
 }
 
+.img_figure{
+    height: auto;
+}
+
 /*    Experiences columns    */
 .column {
     display: grid;
     grid-row-gap: 50px;
 }
 
-/*    Individual images style    */
+/*    Individual images style */    
 .img_exp { width:16vw; }
+
+/*   Destinations descriptions    */
+.description {
+    margin: auto;
+    width: 60%;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+/*    Description paragraph to the left    */
+.paraLeft{ 
+    text-align: left;
+    width:80%; 
+}
+
+/*    Description paragraph to the right    */
+.paraRight{
+    text-align:right;
+    padding-left:20%;
+}
+
+/*    Destination main image    */
+.welcome_image {
+    margin-top: 5%;
+    width:100%;
+}
+
+/*    Destination images and videos    */
+.secondSection{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align:center;
+    align-items: center;
+    margin-bottom: 50px;
+ }
+
+/*    Experiences image    */
+.photo{ width:80%; }
 
 /*    Bottom banner    */
 .footer {
@@ -254,6 +314,18 @@ a {
     padding: 20px 20px 0 20px;
 }
 
+#pop_up_exp {
+    width:30vw;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    align-items: center;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    overflow: scroll;
+    background: wheat;
+}
+
 /*    Style for map title (first section)    */
 #map_title {
     font-family: Arial, Verdana;
@@ -339,3 +411,37 @@ a {
 
     .img_exp { width: 46vw; }
 } 
+
+
+@media only screen and (max-width: 1320px) {
+    .secondSection {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .secondSection{
+        grid-template-columns: auto;
+    }
+
+    .paraLeft {
+        margin: auto;
+        margin-top: 10%;
+        text-align: center;
+        padding: 0%;
+    }
+
+    .paraRight {
+        margin: auto;
+        margin-top: 10%;
+        text-align: center;
+        padding: 0%;
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .description {
+        font-size: 15px;
+    }
+
+}
