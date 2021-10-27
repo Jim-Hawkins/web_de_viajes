@@ -10,6 +10,7 @@
     <script src="script/searchBar.js"></script>
     <script src="script/cookies.js"></script>
     <script src="script/dragdrop.js"></script>
+    <script src="script/user_options.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -22,14 +23,72 @@
 	    <label for="drop_down_switch" class="drop_down_button">Menu</label>
         <input type="checkbox" id="drop_down_switch" role="button">
         <ul class = "menu">
-            <li class="top_item"><a href="#" class="top_button">Reserva</a></li>
+            <!--li class="top_item"><a href="#" class="top_button"></a></li>
             <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
-            <li class="top_item"><a href="#" class="top_button">Comprar</a></li>
+            <li class="top_item"><a href="#" class="top_button">Comprar</a></li-->
+            <li class="top_item" id="profile_container">
+                <img id="profile_img" src="images/logo.svg">
+                <p id="profile_name"></p>
+            </li>
+            <li class="top_item">
+                <ul class="menu">
+                    <li class="top_item" id="prof_popup">
+                        <a href="#prof_popup">Mi perfil</a>
+                        <div id="prof_popup" class="overlay">
+                            <div class="popup_body" id="prof_popup_body">
+                                <fieldset id="user">
+                                    <legend>Información personal</legend>
+                                    <label for="change_user">Cree un nombre de usuario: </label>
+                                    <br>
+                                    <input type="text" class="input_field" id="change_user" name="change_user">
+                                </fieldset>
+                                <fieldset id="profile">
+                                    <legend>Información personal</legend>
+                                    <label for="change_img">Escoja su foto de perfil: </label>
+                                    <br>
+                                    <input type="file" accept="image/*" class="input_field" id="change_img" name="change_img">
+                                </fieldset id="interests">
+                                    <legend>Información personal</legend>
+                                    <label for="change_interests">Me interesa... </label>
+                                    <br>
+                                    <select class="input_field" id="change_interests" name="change_interests">
+                                        <option value="culture">Turismo cultural</option>
+                                        <option value="environment">Turismo ambiental</option>
+                                        <option value="history">Turismo histórico</option>
+                                        <option value="business">Turismo de negocios</option>
+                                    </select>
+                                </fieldset>
+                                <br><br>
+                                <input type="submit" value="Acceder" class="bottom_button" onclick="changeCookie();">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="top_item" id="experiences_popup">
+                        <a href="#experiences_popup">Mis experiencias</a>
+                        <div id="experiences_popup" class="overlay">
+                            <div class="popup_body" id="experiences_popup_body">
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="top_item" id="logout_popup">
+                        <a href="#logout_popup">Cerrar sesión</a>
+                        <div id="logout_popup" class="overlay">
+                            <div class="popup_body" id="logout_popup_body">
+                                <a class="close_popup" href="#">&times;</a>
+                                <h2>¿Seguro que quieres cerrar sesión?</h2>
+                                <button type="button" class="bottom_button" onclick="logout();">Sí</button>
+                                <button type="button" class="bottom_button" id="close_button" onclick="closePopup();">No</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
             <li class="top_item">
                 <div id = "login_anonymous">
                     <a href="#login" class="top_button" id="logId">Acceder</a>
                     <div id="login" class="overlay">
-                        <div id="login_body">
+                        <div class="popup_body" id="login_body">
                             <a class="close_popup" href="#">&times;</a>
                             <h2>¡Bienvenido de nuevo!</h2>
                             <form id="login_form"> <!--method="post" enctype="multipart/form-data"-->
@@ -54,7 +113,7 @@
                 <div id="register_anonymous">
                     <a href="#register" class="top_button" id="regId">Registrarse</a>
                     <div id="register" class="overlay">
-                        <div id="register_body">
+                        <div class="popup_body" id="register_body">
                             <a class="close_popup" href="#">&times;</a>
                             <h2>¡Bienvenido a Viajes Ibérica!</h2>
                             <form id="register_form"> <!--method="post", enctype="multipart/form-data" -->

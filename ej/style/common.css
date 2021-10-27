@@ -205,6 +205,23 @@ h1 {
     display: none;
 }
 
+#prof_popup,
+#logout_popup,
+#experiences_popup
+#profile_container{
+    display: none;
+}
+
+/*
+#profile_img {
+    visibility: hidden;
+}
+*/
+
+#profile_name{
+    color: floralwhite;
+}
+
 /*    Individual images style */    
 .img_exp { width:16vw; }
 
@@ -312,6 +329,19 @@ h1 {
 
 /*    More-information footer container    */
 #more { display: flex; }
+
+/*    Log in pop-up style    */
+.popup_body {
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    background: wheat;
+    padding: 20px;
+}
 
 /*    Log in pop-up style    */
 #login_body {

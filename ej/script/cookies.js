@@ -76,31 +76,59 @@ function getCookie(cookie_name) {
     return "";
 }
 
+function checkPasswordOnLogin(email, pwd){
+  //Check the password of the existing cookie
+  user = getCookie(email);
+  user = user.split(',');
+  if (user[1] === pwd){
+    return true;
+  }
+  return false;
+}
+
 
 function checkCookieLogin() {
   //get email introduced and check wheter it is registered
   let email = login_form_email.value;
   if (cookieExists(email)) {
-    alert("Bienvenido a Viajes Ibérica");
+      if (checkPasswordOnLogin(email, login_form_password.value)){
+        alert("Bienvenido a Viajes Ibérica");
+        document.getElementById("register_anonymous").style.display = 'none';
+        document.getElementById("login_anonymous").style.display = 'none';
+
+        document.getElementById("prof_popup").style.display = 'block';
+        document.getElementById("experiences_popup").style.display = 'block';
+        document.getElementById("logout_popup").style.display = 'block';
+        document.getElementById("profile_container").style.display = "block";
+
+        showProfile(getCookie(email));
+        return;
+      }
+      alert("Introduzca una contraseña correcta");
+    } else{
+        alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
+        window.location.href='#';
+        return;
+    }
     //window.location.href='#';
     
-    let reg = document.getElementById("register_anonymous");
-    let log = document.getElementById("login_anonymous");
-    reg.style.visibility = 'hidden';
-    log.style.visibility = 'hidden';
+    //document.getElementById("register_anonymous").style.visibility = 'hidden';
+    //document.getElementById("login_anonymous").style.visibility = 'hidden';
+    //reg.style.visibility = 'hidden';
+    //log.style.visibility = 'hidden';
 
-    let img = document.getElementById("img_perf");
-    img.display = 'block';
+    //let img = document.getElementById("img_perf");
+    //img.display = 'block';
     //document.getElementById("logId").style.visibility = 'hidden';
     
-    return;
   }
-  
-  alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
-  window.location.href='#';
-  return;
-  
-}
+
+  function showProfile(cookie) {
+    alert("hola");
+    cookie = cookie.split(',');
+    document.getElementById("profile_name").innerHTML = cookie[0].substring(1);
+    document.getElementById("profile_img").visibility = "visible";
+  }
 
 
 
