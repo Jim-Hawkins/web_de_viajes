@@ -8,7 +8,7 @@ function createCookieOnRegistry(){
     //check whether this email is already registered
     if ( cookieExists(email) ){
         alert("Ese nombre ya está registrado");
-        window.location.href = "#";
+        //window.location.href = "#";
         return;
     }
     
@@ -36,13 +36,13 @@ function createCookieOnRegistry(){
                 register_form_name.value,
                 register_form_birth.value,
                 register_form_perfimg.value,
-                register_form_prefs.value,
+                register_form_prefs.value
                 ];
 
     //create a new cookie
-    document.cookie = email + "=" + info + expiration + "; path=/; SameSite=secure";
+    document.cookie = email + "=" + info + expiration + "; path=/";
     //close the popup
-    window.location.href = "#";
+    //window.location.href = "#";
 }
 
 /* Reveals whether a cookie exists in the webpage */
@@ -82,22 +82,26 @@ function checkCookieLogin() {
   let email = login_form_email.value;
   if (cookieExists(email)) {
     alert("Bienvenido a Viajes Ibérica");
-    window.location.href='#';
-    show_profile();
-    return;
-  } else{
-    alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
-    window.location.href='#';
+    //window.location.href='#';
+    
+    let reg = document.getElementById("register_anonymous");
+    let log = document.getElementById("login_anonymous");
+    reg.style.visibility = 'hidden';
+    log.style.visibility = 'hidden';
+
+    let img = document.getElementById("img_perf");
+    img.display = 'block';
+    //document.getElementById("logId").style.visibility = 'hidden';
+    
     return;
   }
+  
+  alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
+  window.location.href='#';
+  return;
+  
 }
 
-function show_profile() {
-    var register = getElementsByClassName("register_anonymous");
-    var login = getElementsByClassName("login_anonymous");
-    register.style.display('none');
-    login.style.display('none');
-}
 
 
 

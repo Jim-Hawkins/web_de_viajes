@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header_id">
         <a href="#">
             <img src="images/logo.svg">
         </a>
@@ -26,13 +26,13 @@
             <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
             <li class="top_item"><a href="#" class="top_button">Comprar</a></li>
             <li class="top_item">
-                <div class = "login_anonymous">
-                    <a href="#login" class="top_button">Acceder</a>
+                <div id = "login_anonymous">
+                    <a href="#login" class="top_button" id="logId">Acceder</a>
                     <div id="login" class="overlay">
                         <div id="login_body">
                             <a class="close_popup" href="#">&times;</a>
                             <h2>¡Bienvenido de nuevo!</h2>
-                            <form id="login_form"> <!--method="post", enctype="multipart/form-data" -->
+                            <form id="login_form"> <!--method="post" enctype="multipart/form-data"-->
                                 <label for="login_form_email">Introduzca su correo: </label>
                                 <br>
                                 <input type="text" class="input_field" required id="login_form_email" name="login_form_email">
@@ -51,8 +51,8 @@
                 </div> 
             </li>
             <li class="top_item">
-                <div class="register_anonymous">
-                    <a href="#register" class="top_button">Registrarse</a>
+                <div id="register_anonymous">
+                    <a href="#register" class="top_button" id="regId">Registrarse</a>
                     <div id="register" class="overlay">
                         <div id="register_body">
                             <a class="close_popup" href="#">&times;</a>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hiddenLogin">
+                <div class="hiddenLogin" id="options">
                     <ul class="menu_opt">
                         <li class="top_item">Mi perfil</li>
                         <li class="top_item">Mis experiencias</li>
@@ -326,25 +326,25 @@
     </div>
     
     <br>
-    <div class="experiencesDiv">
-        <div class="column" id="column1" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+    <div class="experiencesDiv" ondrop="drop(event);" ondragover="allowDrop(event);">
+        <!--div class="column" id="column1" ondrop="drop(event);" ondragover="allowDrop(event);"-->
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="Guadarrama">
                 <a href=#Guadarrama class = img_figure>
-                    <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama" >
+                    <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
                 </a>
                 <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
             </figure>
             <div id=Guadarrama class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/tren-de-la-naturaleza.jpg" alt="Sierra de Guadarrama">
                         <br>Fig.1 - Sierra de Guadarrama, <br>Madrid. <br> Disfruta de los placeres naturales de Madrid.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="Fuenla">
                 <a href=#Fuenlabrada class = img_figure>
                     <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
                 </a>
@@ -353,14 +353,14 @@
             <div id=Fuenlabrada class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/fuente-escalera.jpg" alt="Fuente de escaleras">
                         <br>Fig.2 - Fuente de escaleras, Fuenlabrada, <br>Madrid. <br> No, no se puede subir por ellas.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="Aranjuez">
                 <a href=#Aranjuez class = img_figure>
                     <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
                 </a>
@@ -369,17 +369,17 @@
             <div id=Aranjuez class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/Aranjuez.jpg"alt="Palacio de Aranjuez">
                         <br>Fig.3 - Palacio de Aranjuez, <br>Madrid. <br> El paraíso de Madrid, la ciudad.
                     </figure>
                 </div>
             </div>
-        </div>
+        <!--/div-->
 
-        <div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!--<div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">-->
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="Castillo">
                 <a href=#CNavahermosa class = img_figure>
                     <img class="img_exp" src="images/castillo-navahermosa.jpg">
                 </a>
@@ -388,14 +388,14 @@
             <div id=CNavahermosa class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/castillo-navahermosa.jpg">
                         <br>Fig.4 - Castillo en ruinas, <br>Navahermosa, <br>Toledo. <br> Sumérgete en la época medieval.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="risco">
                 <a href=#RNavahermosa class = img_figure>
                     <img class="img_exp" src="images/risco_navahermosa.jpg">
                 </a>
@@ -404,14 +404,14 @@
             <div id=RNavahermosa class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/risco_navahermosa.jpg">
                         <br>Fig.5 - Risco de las Paradas, <br>Navahermosa, <br>Toledo. <br> Asómbrate con las impresionantes vistas.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="milagra">
                 <a href=#ENavahermosa class = img_figure>
                     <img class="img_exp" src="images/milagra.jpg">
                 </a>
@@ -420,15 +420,15 @@
             <div id=ENavahermosa class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/milagra.jpg">
                         <br>Fig.6 - Ermita de la Milagra, <br>Navahermosa, <br>Toledo. <br> Descubre la leyenda de la Milagra.
                     </figure>
                 </div>
             </div>
-        </div>
-        <div class="column" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+        <!--/div-->
+        <!--div class="column" id="column3" ondrop="drop(event)" ondragover="allowDrop(event)"-->
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="andorra">
                 <a href=#Ermita class = img_figure>
                     <img class="img_exp" src="images/Ermita_andorra.jpg">
                 </a>
@@ -437,14 +437,14 @@
             <div id=Ermita class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/Ermita_andorra.jpg">
                         <br>Fig.7 - Ermita, <br>Andorra, <br>Teruel. <br> Una Ermita con mucha atracción.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="mineros">
                 <a href=#Estatua class = img_figure>
                     <img class="img_exp" src="images/mineros-andorra.jpg">
                 </a>
@@ -453,14 +453,14 @@
             <div id=Estatua class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">
+                    <figure class="figure">
                         <img class="img_exp" src="images/mineros-andorra.jpg">
                         <br>Fig.8 - Estatua de los Mineros, <br>Andorra, <br>Teruel. <br> Descubre el pueblo de los mineros.
                     </figure>
                 </div>
             </div>
 
-            <figure class="figure" draggable=true ondragstart="drag(event)">
+            <figure class="figure" draggable="true" ondragstart="drag(event)" id="iglesia_andorra">
                 <a href=#Iglesia class = img_figure>    
                     <img class="img_exp" src="images/catedral-andorra.jpg">
                 </a>
@@ -469,14 +469,14 @@
             <div id=Iglesia class="overlay">
                 <div id="pop_up_exp">
                     <a class="close_popup" href="#">&times;</a>
-                    <figure class="figure" draggable=true ondragstart="drag(event)">    
+                    <figure class="figure">    
                         <img class="img_exp" src="images/catedral-andorra.jpg">
                         <br>Fig.9 - Iglesia, <br>Andorra, <br>Teruel. <br> Visita la Iglesia de Andorra.
                     </figure>
                 </div>
             </div>
 
-        </div>
+        <!--/div-->
     </div>
     
     <div class="footer">
