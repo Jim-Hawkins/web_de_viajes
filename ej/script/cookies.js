@@ -44,6 +44,7 @@ function createCookieOnRegistry(){
     document.cookie = email + "=" + info + expiration + "; path=/";
     //close the popup
     //window.location.href = "#";
+    showProfile(getCookie(email));
 }
 
 /* Reveals whether a cookie exists in the webpage */
@@ -120,7 +121,8 @@ function showProfile(cookie) {
     document.getElementById("profile_name").innerHTML = cookie[0].substring(1);
 
     //show the profile img and the drop-down button
-    document.getElementById("profile_img").visibility = "visible";
+    if (cookie[4] !== ""){document.getElementById("profile_img").src = cookie[4];}
+
     document.getElementById("profile_container").style.display = "block";
     document.getElementById("drop_down_button_when_loggedin").style.display = "block";
 
@@ -161,6 +163,9 @@ function changeCookie()
 
       document.cookie = email + "=" + info + payload[6] + "; path=/";
       document.getElementById("profile_name").innerHTML = newname;
+      if (newimg !== ""){document.getElementById("profile_img").src = newimg;}
+      else{document.getElementById("profile_img").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvwf00lGTUM5dS2Nk1k99Rjr36a9sr1Ld8ci31CL5Mi7NZwSGci0jt4o8IaMNfuhyS_NU&usqp=CAU"}
+
     }
     
 }

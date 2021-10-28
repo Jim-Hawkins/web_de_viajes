@@ -255,11 +255,12 @@ h1 {
     display: none;
 }
 
-/*
+
 #profile_img {
-    visibility: hidden;
+    width: 35%;
+    padding-top: 5%;
 }
-*/
+
 
 #profile_name{
     color: floralwhite;
