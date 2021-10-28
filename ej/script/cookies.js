@@ -54,7 +54,7 @@ function cookieExists(cookie_name) {
 
 /* Receives a cookie_name and returns the corresponding cookie */
 function getCookie(cookie_name) {
-    
+    //alert(cookie_name);
     //obtain the array of cookies and declare an iterator
     let cookies = decodeURIComponent(document.cookie).split(';');
     let current_cookie = null;
@@ -71,7 +71,7 @@ function getCookie(cookie_name) {
             return current_cookie.substring(cookie_name.length, current_cookie.length);
         }
     }
-    //if none of the cookies matches 'cookie_name', return an empty string
+    //if none of the cookies matches 'cookie_name', return an empty string4
     return "";
 }
 
@@ -131,8 +131,39 @@ function showProfile(cookie) {
 
 function changeCookie()
 {
-    document.cookie
-    change_user.value
+  //nuevo nombre que escoge el usuario
+  let newname = change_user.value;
+  let newimg = change_img.value;
+  let newint = change_interests.value;
+
+  console.log(document.cookie);
+  //nombre antiguo que aparece debajo de la foto de perfil
+  let uname=document.getElementById("profile_name").innerHTML;
+  //cada una de las cookies
+  let cookies = document.cookie.split(';');
+  for(let i = 0; i < cookies.length; i++) {
+    let value = cookies[i].substring(cookies[i].indexOf('=')+1);
+    value = value.split(",");
+    //alert(cookies[i]);
+    email = cookies[i].split("=")[0];
+    payload = cookies[i].split("=")[1].split(",");
+    
+    if (value[0]===uname){
+      
+      let info = [
+        newname,
+        payload[1],
+        payload[2],
+        payload[3],
+        newimg,
+        newint
+        ];
+
+      document.cookie = email + "=" + info + payload[6] + "; path=/";
+      document.getElementById("profile_name").innerHTML = newname;
+    }
+    
+}
 }
 
 

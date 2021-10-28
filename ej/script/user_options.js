@@ -15,9 +15,10 @@ function logout()
 }
 
 /* Function to close the pop-out */
-function closePopup()
+function closePopup(element)
 {
-    document.getElementById("logout_popup").style.visibility = "hidden";
+    element.style.visibility = "hidden";
+    //document.getElementById("logout_popup").style.visibility = "hidden";
     logout_popup.style.opacity = "0";
 }
 

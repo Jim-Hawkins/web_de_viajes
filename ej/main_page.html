@@ -52,7 +52,8 @@
                                     </select>
                                 </fieldset>
                                 <br><br>
-                                <input type="submit" value="Acceder" class="bottom_button" onclick="changeCookie();">
+                                <input type="submit" value="Guardar" class="bottom_button" onclick="changeCookie();">
+                                <button type="button" class="bottom_button" id="close_button" onclick="closePopup(prof_popup);">Cancelar</button>
                             </div>
                         </div>
                     </li>
@@ -71,7 +72,7 @@
                                 <a class="close_popup" href="#">&times;</a>
                                 <h2>¿Seguro que quieres cerrar sesión?</h2>
                                 <button type="button" class="bottom_button" onclick="logout();">Sí</button>
-                                <button type="button" class="bottom_button" id="close_button" onclick="closePopup();">No</button>
+                                <button type="button" class="bottom_button" id="close_button" onclick="closePopup(logout_popup);">No</button>
                             </div>
                         </div>
                     </li>
