@@ -76,6 +76,18 @@ h1 {
     text-decoration: none;
 }
 
+.options_menu {
+    background: green;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    display: none;
+
+    position: absolute;
+    margin-top: 70px;
+
+}
+
 /*    Top buttons container style    */
 .menu {
     margin: 0;
@@ -145,6 +157,20 @@ h1 {
     padding: 7px 0;
 }
 
+/*    Style of drop-down list menu when logged in   */
+.drop_down_button_when_loggedin {
+    font-family: 'Letric PERSONAL USE ONLY', sans-serif;
+    text-decoration: none;
+    display: none;
+    color: rgb(224, 199, 54);
+    background: black;
+    cursor: pointer;
+    text-align: center;
+    padding: 7px 0;
+    position: relative;
+    font-size: xxx-large;
+}
+
 /*    Map styles    */
 .mapDiv{ text-align: center; }
 
@@ -207,7 +233,10 @@ h1 {
 
 #prof_popup,
 #logout_popup,
-#experiences_popup
+#experiences_popup{
+    width: 30%;
+}
+
 #profile_container{
     display: none;
 }
@@ -292,6 +321,18 @@ h1 {
     font-size: 200%;
 }
 
+
+
+.menu_profile {
+    /*display: block;*/
+    display: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 40%;
+    padding-right: 10%;
+    font-size: xxx-large;
+}
+
 /*    Site-related information    */
 .more_info {
     margin-left: auto;
@@ -324,8 +365,15 @@ h1 {
 /*    Hide checkbox that controls whether drop-down is expanded    */
 #drop_down_switch { display: none; }
 
+/*     Checkbox for user menu options*/
+#menu_profile {
+    display: none;
+}
+
 /*    Applies to condensed menu: when 'MENU' button clicked on: show options    */
 #drop_down_switch:checked ~ .menu { display: block; }
+
+#menu_profile:checked ~ .options_menu{display: block;}
 
 /*    More-information footer container    */
 #more { display: flex; }

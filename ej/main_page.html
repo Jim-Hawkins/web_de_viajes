@@ -7,11 +7,7 @@
     <link href="http://fonts.cdnfonts.com/css/letric-personal-use-only" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="shortcut icon" href="images/logo.svg">
-    <script src="script/searchBar.js"></script>
-    <script src="script/cookies.js"></script>
-    <script src="script/dragdrop.js"></script>
-    <script src="script/user_options.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 </head>
 <body>
     <div class="header" id="header_id">
@@ -26,12 +22,15 @@
             <!--li class="top_item"><a href="#" class="top_button"></a></li>
             <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
             <li class="top_item"><a href="#" class="top_button">Comprar</a></li-->
-            <li class="top_item" id="profile_container">
+            <li id="profile_container" class="top_item">
                 <img id="profile_img" src="images/logo.svg">
                 <p id="profile_name"></p>
             </li>
             <li class="top_item">
-                <ul class="menu">
+                <!--label for="menu_profile" class="drop_down_button_when_loggedin">Settings</label-->
+                <p class="drop_down_button_when_loggedin">Settings</p>
+                <input type="checkbox" id="menu_profile" role="button">
+                <ul class="options_menu">
                     <li class="top_item" id="prof_popup">
                         <a href="#prof_popup">Mi perfil</a>
                         <div id="prof_popup" class="overlay">
@@ -568,4 +567,9 @@
         </div>
     </div>
 </body>
+<script src="script/searchBar.js"></script>
+<script src="script/cookies.js"></script>
+<script src="script/dragdrop.js"></script>
+<script src="script/user_options.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html>

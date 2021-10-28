@@ -96,10 +96,12 @@ function checkCookieLogin() {
         document.getElementById("register_anonymous").style.display = 'none';
         document.getElementById("login_anonymous").style.display = 'none';
 
-        document.getElementById("prof_popup").style.display = 'block';
+        /*document.getElementById("prof_popup").style.display = 'block';
         document.getElementById("experiences_popup").style.display = 'block';
-        document.getElementById("logout_popup").style.display = 'block';
+        document.getElementById("logout_popup").style.display = 'block';*/
         document.getElementById("profile_container").style.display = "block";
+        document.getElementById("menu_profile").style.display = "inline";
+        document.getElementsByClassName("drop_down_button_when_loggedin")[0].style.display = "inline";
 
         showProfile(getCookie(email));
         return;
@@ -124,7 +126,6 @@ function checkCookieLogin() {
   }
 
   function showProfile(cookie) {
-    alert("hola");
     cookie = cookie.split(',');
     document.getElementById("profile_name").innerHTML = cookie[0].substring(1);
     document.getElementById("profile_img").visibility = "visible";
