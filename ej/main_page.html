@@ -16,38 +16,32 @@
         </a>
         
         <h2 class="page_title">Viajes Ibérica</h2>
-	    <label for="drop_down_switch" class="drop_down_button">Menu</label>
-        <input type="checkbox" id="drop_down_switch" role="button">
+	    <p id="drop_down_button">Menú</p>
         <ul class = "menu">
-            <!--li class="top_item"><a href="#" class="top_button"></a></li>
-            <li class="top_item"><a href="#" class="top_button">Vuelo</a></li>
-            <li class="top_item"><a href="#" class="top_button">Comprar</a></li-->
             <li id="profile_container" class="top_item">
                 <img id="profile_img" src="images/logo.svg">
                 <p id="profile_name"></p>
             </li>
             <li class="top_item">
-                <!--label for="menu_profile" class="drop_down_button_when_loggedin">Settings</label-->
-                <p class="drop_down_button_when_loggedin">Settings</p>
-                <input type="checkbox" id="menu_profile" role="button">
+                <p id="drop_down_button_when_loggedin">Settings</p>
                 <ul class="options_menu">
-                    <li class="top_item" id="prof_popup">
-                        <a href="#prof_popup">Mi perfil</a>
+                    <li class="top_item" id="prof_button">
+                        Mi perfil
                         <div id="prof_popup" class="overlay">
                             <div class="popup_body" id="prof_popup_body">
                                 <fieldset id="user">
-                                    <legend>Información personal</legend>
-                                    <label for="change_user">Cree un nombre de usuario: </label>
+                                    <legend>Cambiar nombre de usuario</legend>
+                                    <label for="change_user">Introduzca el nuevo nombre de usuario: </label>
                                     <br>
                                     <input type="text" class="input_field" id="change_user" name="change_user">
                                 </fieldset>
                                 <fieldset id="profile">
-                                    <legend>Información personal</legend>
-                                    <label for="change_img">Escoja su foto de perfil: </label>
+                                    <legend>Cambiar foto de perfil</legend>
+                                    <label for="change_img">Escoja su nueva foto de perfil (url): </label>
                                     <br>
-                                    <input type="file" accept="image/*" class="input_field" id="change_img" name="change_img">
+                                    <input type="url" class="input_field" id="change_img" name="change_img">
                                 </fieldset id="interests">
-                                    <legend>Información personal</legend>
+                                    <legend>Modificar intereses</legend>
                                     <label for="change_interests">Me interesa... </label>
                                     <br>
                                     <select class="input_field" id="change_interests" name="change_interests">
@@ -62,16 +56,16 @@
                             </div>
                         </div>
                     </li>
-                    <li class="top_item" id="experiences_popup">
-                        <a href="#experiences_popup">Mis experiencias</a>
+                    <li class="top_item" id="experiences_button">
+                        Mis experiencias
                         <div id="experiences_popup" class="overlay">
                             <div class="popup_body" id="experiences_popup_body">
                                 
                             </div>
                         </div>
                     </li>
-                    <li class="top_item" id="logout_popup">
-                        <a href="#logout_popup">Cerrar sesión</a>
+                    <li class="top_item" id="logout_button">
+                        Cerrar sesión
                         <div id="logout_popup" class="overlay">
                             <div class="popup_body" id="logout_popup_body">
                                 <a class="close_popup" href="#">&times;</a>
@@ -104,9 +98,6 @@
                         </div>
                     </div> 
                 </div>
-                <div class = "hiddenLogin" id="img_perf">
-                    <img src = "images/logo.svg" alt = "imagen de perfil">
-                </div> 
             </li>
             <li class="top_item">
                 <div id="register_anonymous">
@@ -140,9 +131,9 @@
                                     <br>
                                     <input type="date" class="input_field" required id="register_form_birth" name="register_form_birth">
                                     <br><br>
-                                    <label for="register_form_perfimg">Escoja su foto de perfil: </label>
+                                    <label for="register_form_perfimg">Escoja su foto de perfil (url): </label>
                                     <br>
-                                    <input type="file" accept="image/*" class="input_field" id="register_form_perfimg" name="register_form_perfimg">
+                                    <input type="url" class="input_field" id="register_form_perfimg" name="register_form_perfimg">
                                     <br><br>
                                     <label for="register_form_prefs">Me interesa... </label>
                                     <br>
@@ -165,12 +156,6 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                <div class="hiddenLogin" id="options">
-                    <ul class="menu_opt">
-                        <li class="top_item">Mi perfil</li>
-                        <li class="top_item">Mis experiencias</li>
-                        <li class="top_item">Cerrar sesión</li>
                 </div>
             </li>
         </ul>
@@ -567,9 +552,9 @@
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script/searchBar.js"></script>
 <script src="script/cookies.js"></script>
 <script src="script/dragdrop.js"></script>
 <script src="script/user_options.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html>

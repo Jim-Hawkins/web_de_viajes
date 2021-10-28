@@ -2,12 +2,13 @@
 /* Function to create a cookie when a user registers in the page */
 function createCookieOnRegistry(){
 
+    document.cookie = "";
     //email will be cookie identifier
     let email = register_form_email.value;
     
     //check whether this email is already registered
     if ( cookieExists(email) ){
-        alert("Ese nombre ya está registrado");
+        alert("Ese correo ya está registrado");
         //window.location.href = "#";
         return;
     }
@@ -53,8 +54,6 @@ function cookieExists(cookie_name) {
 
 /* Receives a cookie_name and returns the corresponding cookie */
 function getCookie(cookie_name) {
-    //add = symbol for easing search and cookie manipulation
-    //cookie_name += "=";
     
     //obtain the array of cookies and declare an iterator
     let cookies = decodeURIComponent(document.cookie).split(';');
@@ -76,60 +75,65 @@ function getCookie(cookie_name) {
     return "";
 }
 
+/* When the user tries to login it will check if the fields are correct */
 function checkPasswordOnLogin(email, pwd){
-  //Check the password of the existing cookie
-  user = getCookie(email);
-  user = user.split(',');
-  if (user[1] === pwd){
-    return true;
-  }
-  return false;
+  
+  //obtain the cookie and it splits the str with the ,'s
+  user = getCookie(email).split(',');
+
+  //returns if the passwords are the same so the user can access to his/her profile
+  return user[1] === pwd
 }
 
-
+/* Checks the cookie after login */
 function checkCookieLogin() {
   //get email introduced and check wheter it is registered
   let email = login_form_email.value;
   if (cookieExists(email)) {
+
+    //checks if the login is correct (fields are correct)
       if (checkPasswordOnLogin(email, login_form_password.value)){
-        alert("Bienvenido a Viajes Ibérica");
-        document.getElementById("register_anonymous").style.display = 'none';
-        document.getElementById("login_anonymous").style.display = 'none';
-
-        /*document.getElementById("prof_popup").style.display = 'block';
-        document.getElementById("experiences_popup").style.display = 'block';
-        document.getElementById("logout_popup").style.display = 'block';*/
-        document.getElementById("profile_container").style.display = "block";
-        document.getElementById("menu_profile").style.display = "inline";
-        document.getElementsByClassName("drop_down_button_when_loggedin")[0].style.display = "inline";
-
+        
+        //It shows the profile stuff
         showProfile(getCookie(email));
         return;
       }
+
+      //if the password was not correct => alert
       alert("Introduzca una contraseña correcta");
-    } else{
-        alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
-        window.location.href='#';
-        return;
-    }
-    //window.location.href='#';
-    
-    //document.getElementById("register_anonymous").style.visibility = 'hidden';
-    //document.getElementById("login_anonymous").style.visibility = 'hidden';
-    //reg.style.visibility = 'hidden';
-    //log.style.visibility = 'hidden';
+  } else{
+      //if the cookie does not exist => alert
+      alert("Este correo electrónico no está registrado. Por favor introduzca un correo correcto.");
+      window.location.href='#';
+      return;
+  }    
+}
 
-    //let img = document.getElementById("img_perf");
-    //img.display = 'block';
-    //document.getElementById("logId").style.visibility = 'hidden';
-    
-  }
+/* It will show all the buttons, imgs of the profile after log in... and it will hide all the previous stuff */
+function showProfile(cookie) {
+    alert("Bienvenido a Viajes Ibérica");
 
-  function showProfile(cookie) {
+    //obtains the cookie
     cookie = cookie.split(',');
+
+    //it shows the profile name in the header
     document.getElementById("profile_name").innerHTML = cookie[0].substring(1);
+
+    //show the profile img and the drop-down button
     document.getElementById("profile_img").visibility = "visible";
+    document.getElementById("profile_container").style.display = "block";
+    document.getElementById("drop_down_button_when_loggedin").style.display = "block";
+
+    //hide the register and login buttons
+    document.getElementById("register_anonymous").style.display = 'none';
+    document.getElementById("login_anonymous").style.display = 'none';
   }
+
+function changeCookie()
+{
+    document.cookie
+    change_user.value
+}
 
 
 

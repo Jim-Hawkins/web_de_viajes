@@ -77,14 +77,14 @@ h1 {
 }
 
 .options_menu {
-    background: green;
-    height: 100%;
+    background: black;
+    top: 170px;
+    height: 100px;
+    width: 50%;
     padding: 0;
     list-style: none;
     display: none;
-
     position: absolute;
-    margin-top: 70px;
 
 }
 
@@ -95,6 +95,7 @@ h1 {
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     font-size: x-large;
     list-style-type: none;
+    display: block;
 }
 
 /*    Style of the container of registration and login pop-ups    */
@@ -109,6 +110,7 @@ h1 {
     visibility: hidden;
     opacity: 0;
     padding: 50px;
+    color: black;
 } 
 
 /*    Actions to take when overlay is targeted    */
@@ -147,7 +149,7 @@ h1 {
 }
 
 /*    Style of drop-down list menu    */
-.drop_down_button {
+#drop_down_button {
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     display: none;
     text-decoration: none;
@@ -158,7 +160,7 @@ h1 {
 }
 
 /*    Style of drop-down list menu when logged in   */
-.drop_down_button_when_loggedin {
+#drop_down_button_when_loggedin {
     font-family: 'Letric PERSONAL USE ONLY', sans-serif;
     text-decoration: none;
     display: none;
@@ -231,11 +233,23 @@ h1 {
     display: none;
 }
 
-#prof_popup,
-#logout_popup,
-#experiences_popup{
+#prof_button,
+#logout_button,
+#experiences_button{
     width: 30%;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+    cursor: pointer;
 }
+
+.user_options_text {
+    color: white;
+    text-align: center;
+    
+}
+
+#logout_popup { visibility: hidden;}
 
 #profile_container{
     display: none;
@@ -365,15 +379,12 @@ h1 {
 /*    Hide checkbox that controls whether drop-down is expanded    */
 #drop_down_switch { display: none; }
 
-/*     Checkbox for user menu options*/
-#menu_profile {
-    display: none;
-}
+
 
 /*    Applies to condensed menu: when 'MENU' button clicked on: show options    */
 #drop_down_switch:checked ~ .menu { display: block; }
 
-#menu_profile:checked ~ .options_menu{display: block;}
+
 
 /*    More-information footer container    */
 #more { display: flex; }
@@ -382,7 +393,6 @@ h1 {
 .popup_body {
     border-width: 5px;
     border-style: solid;
-    border-radius: 5px;
     border-radius: 5px;
     text-align: center;
     font-family: Verdana, sans-serif;
@@ -462,14 +472,14 @@ h1 {
         display: none;
         position: absolute;
         margin-left: 65%;
-        margin-top: 70px;
+        margin-top: 120px;
     }
     
     /*    Drop-down elements style*/
     .top_item { width: 100%; }
 
     /*    Drop-down label style    */
-    .drop_down_button {
+    #drop_down_button {
         display: block;
         cursor: pointer;
         position: relative;
